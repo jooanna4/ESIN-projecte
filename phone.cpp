@@ -47,12 +47,14 @@ phone phone::operator++(int) throw() {
 }
 
 bool phone::operator==(const phone& T) const throw() {
+    bool found;
     if (_num == T._num && 
         _compt == T._compt &&
         _name == T._name)
-        return true;
+        found = true;
     else
-        return false;
+        found = false;
+    return found;
 }
 
 bool phone::operator!=(const phone& T) const throw() {
@@ -60,27 +62,61 @@ bool phone::operator!=(const phone& T) const throw() {
 }
 
 bool phone::operator>(const phone& T) const throw() {
-    if (_compt > T._compt)
-        return true;
+    bool found(true);
+    if (_compt < T._compt)
+        found = false;
     else if (_compt == T._compt) {
-        for (int i = 0; i < _name.size(); i++) {
+        int i = 0;
+        while (i < _name.size() && found) {
             if (_name[i] < T._name[i]) 
-                return false;
+                found = false;
+            i++;
         }
     }
-    else
-        return false;
-    
+    return found;
 }
 
 bool phone::operator<(const phone& T) const throw() {
-    
+    bool found(true);
+    if (_compt > T._compt)
+        found = false;
+    else if (_compt == T._compt) {
+        int i = 0;
+        while (i < _name.size() && found) {
+            if (_name[i] > T._name[i]) 
+                found = false;
+            i++;
+        }
+    }
+    return found;
 }
 
 bool phone::operator<=(const phone& T) const throw() {
-    
+    bool found(true);
+    if (*this > T)
+        found = false;
+    else if (_compt == T._compt) {
+        int i = 0;
+        while (i < _name.size() && found) {
+            if (_name[i] != T._name[i]) 
+                found = false;
+            i++;
+        }
+    }
+    return found;
 }
 
 bool phone::operator>=(const phone& T) const throw() {
-    
+    bool found(true);
+    if (*this < T)
+        found = false;
+    else if (_compt == T._compt) {
+        int i = 0;
+        while (i < _name.size() && found) {
+            if (_name[i] != T._name[i]) 
+                found = false;
+            i++;
+        }
+    }
+    return found;
 }
