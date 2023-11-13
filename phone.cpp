@@ -2,7 +2,9 @@
 
 phone::phone(nat num=0, const string& name="", nat compt=0) throw(error) {
     _num = num;
-    if (name == DELETECHAR || name == ENDCHAR || name == ENDPREF) 
+    if (name == DELETECHAR || 
+        name == ENDCHAR || 
+        name == ENDPREF) 
         throw (ErrNomIncorrecte);
     else
         _name = name;
