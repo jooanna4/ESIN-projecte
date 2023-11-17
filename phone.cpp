@@ -15,7 +15,6 @@ phone::phone(const phone& T) throw(error) {
     _num = T._num;
     _name = T._name;
     _compt = T._compt;
-    hhdkjksh
 }
 
 phone& phone::operator=(const phone& T) throw(error) {
