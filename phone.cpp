@@ -24,7 +24,7 @@ phone& phone::operator=(const phone& T) throw(error) {
     return *this;
 }
 
-~phone() throw() {}
+phone::~phone() throw() {}
 
 nat phone::numero() const throw() {
     return _num;
