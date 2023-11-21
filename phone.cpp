@@ -2,9 +2,9 @@
 
 phone::phone(nat num=0, const string& name="", nat compt=0) throw(error) {
     _num = num;
-    if (name == DELETECHAR || 
-        name == ENDCHAR || 
-        name == ENDPREF) 
+    if (name == to_string(DELETECHAR) || 
+        name == to_string(ENDCHAR) || 
+        name == to_string(ENDPREF)) 
         throw (ErrNomIncorrecte);
     else
         _name = name;
@@ -68,7 +68,7 @@ bool phone::operator>(const phone& T) const throw() {
     if (_compt < T._compt)
         found = false;
     else if (_compt == T._compt) {
-        int i = 0;
+        unsigned int i = 0;
         while (i < _name.size() && found) {
             if (_name[i] < T._name[i]) 
                 found = false;
@@ -83,7 +83,7 @@ bool phone::operator<(const phone& T) const throw() {
     if (_compt > T._compt)
         found = false;
     else if (_compt == T._compt) {
-        int i = 0;
+        unsigned int i = 0;
         while (i < _name.size() && found) {
             if (_name[i] > T._name[i]) 
                 found = false;
@@ -98,7 +98,7 @@ bool phone::operator<=(const phone& T) const throw() {
     if (*this > T)
         found = false;
     else if (_compt == T._compt) {
-        int i = 0;
+        unsigned int i = 0;
         while (i < _name.size() && found) {
             if (_name[i] != T._name[i]) 
                 found = false;
@@ -113,7 +113,7 @@ bool phone::operator>=(const phone& T) const throw() {
     if (*this < T)
         found = false;
     else if (_compt == T._compt) {
-        int i = 0;
+        unsigned int i = 0;
         while (i < _name.size() && found) {
             if (_name[i] != T._name[i]) 
                 found = false;
