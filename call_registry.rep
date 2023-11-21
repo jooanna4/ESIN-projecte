@@ -1,0 +1,10 @@
+struct node {
+    phone _ph;
+    node* _esq;
+    node* _dret;
+    nat _altura;
+};
+node* _arrel;
+
+static int altura(node *n);
+static int factor_equilibri(node *n);

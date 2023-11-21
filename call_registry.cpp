@@ -1,5 +1,14 @@
 #include "call_registry.hpp"
 
+// Metodes privats
+static int call_registry::altura(node *n) {
+    
+}
+static int call_registry::factor_equilibri(node *n) {
+
+}
+
+// Metodes publics
 call_registry::call_registry() throw(error);
 
 call_registry::call_registry(const call_registry& R) throw(error);

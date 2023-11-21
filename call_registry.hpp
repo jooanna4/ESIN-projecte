@@ -27,7 +27,7 @@ public:
   el número de telèfon donat, l'string buit com a nom i el comptador a 1. */
   void registra_trucada(nat num) throw(error);
 
- /* Assigna el nom indicat al número donat.
+  /* Assigna el nom indicat al número donat.
   Si el número no estava prèviament en el call_registry, s'afegeix
   una nova entrada amb el número i nom donats, i el comptador 
   de trucades a 0. 

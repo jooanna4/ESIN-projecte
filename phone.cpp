@@ -44,18 +44,18 @@ phone& phone::operator++() throw() {
 }
 
 phone phone::operator++(int) throw() {
+    phone aux(*this);
     _compt++;
-    return *this;
+    return aux;
 }
 
 bool phone::operator==(const phone& T) const throw() {
-    bool found;
+    bool found(false);
     if (_num == T._num && 
         _compt == T._compt &&
         _name == T._name)
         found = true;
-    else
-        found = false;
+
     return found;
 }
 
