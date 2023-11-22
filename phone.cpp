@@ -1,6 +1,6 @@
 #include "phone.hpp"
 
-phone::phone(nat num=0, const string& name="", nat compt=0) throw(error) {
+phone::phone(nat num, const string& name, nat compt) throw(error) {
     _num = num;
     if (name == to_string(DELETECHAR) || 
         name == to_string(ENDCHAR) || 
