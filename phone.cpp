@@ -1,14 +1,24 @@
 #include "phone.hpp"
 
 phone::phone(nat num, const string& name, nat compt) throw(error) {
-    _num = num;
-    if (name == to_string(DELETECHAR) || 
-        name == to_string(ENDCHAR) || 
-        name == to_string(ENDPREF)) 
-        throw (ErrNomIncorrecte);
-    else
+    bool found(false);
+    nat i = 0;
+    while (not found && i < name.size()) {
+        if (name[i] == DELETECHAR ||
+            name[i] == ENDCHAR ||
+            name[i] == ENDPREF)
+            found = true;
+        i++;
+    }
+
+    if (found)
+        throw error(ErrNomIncorrecte);
+        
+    else {
+        _num = num;
         _name = name;
-    _compt = compt;
+        _compt = compt;
+    }
 }
 
 phone::phone(const phone& T) throw(error) {
@@ -51,8 +61,7 @@ phone phone::operator++(int) throw() {
 
 bool phone::operator==(const phone& T) const throw() {
     bool found(false);
-    if (_num == T._num && 
-        _compt == T._compt &&
+    if (_compt == T._compt &&
         _name == T._name)
         found = true;
 
