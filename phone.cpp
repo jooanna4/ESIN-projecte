@@ -1,4 +1,5 @@
 #include "phone.hpp"
+#include <cstring>
 
 phone::phone(nat num, const string& name, nat compt) throw(error) {
     bool found(false);
@@ -77,37 +78,30 @@ bool phone::operator>(const phone& T) const throw() {
     if (_compt <= T._compt)
         found = false;
     else if (_compt == T._compt) {
-        if (_name.size() != T._name.size())
-            found = false;
-        else {
-            unsigned int i = 0;
-            while (i < _name.size() && found) {
-                if (_name[i] < T._name[i]) 
-                    found = false;
-                i++;
+        nat i = 0;
+        while (_name[i] != '\0' && T._name[i] != '\0') {
+            if (_name[i] < T._name[i]) {
+                found = false;
+                break;
             }
+            else if (_name[i] > T._name[i]) {
+                found = true;
+                break;
+            }
+            i++;
         }
+
+        /* Si els noms son iguals fins l'string mes petit,
+        el mes llarg es mes gran */
+        if (_name[i] == '\0' && T._name[i] != '\0')
+            found = false;
+        
     }
     return found;
 }
 
 bool phone::operator<(const phone& T) const throw() {
-    bool found(true);
-    if (_compt > T._compt)
-        found = false;
-    else if (_compt == T._compt) {
-        if (_name.size() != T._name.size())
-            found = false;
-        else {
-            unsigned int i = 0;
-            while (i < _name.size() && found) {
-                if (_name[i] > T._name[i]) 
-                    found = false;
-                i++;
-            }
-        }
-    }
-    return found;
+    return T > (*this);
 }
 
 bool phone::operator<=(const phone& T) const throw() {

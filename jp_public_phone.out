@@ -266,10 +266,10 @@ false
 #init tel45 phone 345 "nombre" 30
 #init tel50 phone 890 "nombre" 30
 #tel45 < tel50
-true
+false
 ##false
 #tel50 < tel45
-true
+false
 ##false
 ###!
 ###!
@@ -320,10 +320,10 @@ false
 #init tel45 phone 345 "nombre" 30
 #init tel50 phone 890 "nombre" 30
 #tel45 >= tel50
-false
+true
 ##true
 #tel50 >= tel45
-false
+true
 ##true
 ###!
 ###!
