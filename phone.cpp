@@ -74,14 +74,18 @@ bool phone::operator!=(const phone& T) const throw() {
 
 bool phone::operator>(const phone& T) const throw() {
     bool found(true);
-    if (_compt < T._compt)
+    if (_compt <= T._compt)
         found = false;
     else if (_compt == T._compt) {
-        unsigned int i = 0;
-        while (i < _name.size() && found) {
-            if (_name[i] < T._name[i]) 
-                found = false;
-            i++;
+        if (_name.size() != T._name.size())
+            found = false;
+        else {
+            unsigned int i = 0;
+            while (i < _name.size() && found) {
+                if (_name[i] < T._name[i]) 
+                    found = false;
+                i++;
+            }
         }
     }
     return found;
@@ -92,11 +96,15 @@ bool phone::operator<(const phone& T) const throw() {
     if (_compt > T._compt)
         found = false;
     else if (_compt == T._compt) {
-        unsigned int i = 0;
-        while (i < _name.size() && found) {
-            if (_name[i] > T._name[i]) 
-                found = false;
-            i++;
+        if (_name.size() != T._name.size())
+            found = false;
+        else {
+            unsigned int i = 0;
+            while (i < _name.size() && found) {
+                if (_name[i] > T._name[i]) 
+                    found = false;
+                i++;
+            }
         }
     }
     return found;
