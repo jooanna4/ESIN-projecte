@@ -74,9 +74,9 @@ bool phone::operator!=(const phone& T) const throw() {
 }
 
 bool phone::operator>(const phone& T) const throw() {
-    bool found(true);
-    if (_compt <= T._compt)
-        found = false;
+    bool found(false);
+    if (_compt > T._compt)
+        found = true;
     else if (_compt == T._compt) {
         nat i = 0;
         while (_name[i] != '\0' && T._name[i] != '\0') {
@@ -93,8 +93,10 @@ bool phone::operator>(const phone& T) const throw() {
 
         /* Si els noms son iguals fins l'string mes petit,
         el mes llarg es mes gran */
-        if (_name[i] == '\0' && T._name[i] != '\0')
+        if (_name[i] == '\0' && (T._name[i] != '\0' || T._name[i] == '\0'))
             found = false;
+        else if (_name[i] != '\0' && T._name[i] == '\0')
+            found = true;
         
     }
     return found;
@@ -105,31 +107,9 @@ bool phone::operator<(const phone& T) const throw() {
 }
 
 bool phone::operator<=(const phone& T) const throw() {
-    bool found(true);
-    if (*this > T)
-        found = false;
-    else if (_compt == T._compt) {
-        unsigned int i = 0;
-        while (i < _name.size() && found) {
-            if (_name[i] != T._name[i]) 
-                found = false;
-            i++;
-        }
-    }
-    return found;
+    return ((*this) == T || (*this < T));
 }
 
 bool phone::operator>=(const phone& T) const throw() {
-    bool found(true);
-    if (*this < T)
-        found = false;
-    else if (_compt == T._compt) {
-        unsigned int i = 0;
-        while (i < _name.size() && found) {
-            if (_name[i] != T._name[i]) 
-                found = false;
-            i++;
-        }
-    }
-    return found;
+    return ((*this) == T || (*this > T));
 }
