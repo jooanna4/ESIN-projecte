@@ -1,0 +1,1914 @@
+==1697== Memcheck, a memory error detector
+==1697== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1697== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1697== Command: ./program.exe
+==1697== 
+==1697== error calling PR_SET_PTRACER, vgdb might block
+###!-----------------------------------------
+###!
+###! MODUL CALL_REGISTRY
+###!
+###!-----------------------------------------
+###1 call_registry: buit
+###!-----------------------------------------
+###!
+#init c1 call_registry
+#c 101
+false
+##false
+#nom_cr 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#e 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_entrades
+0
+##0
+#es_buit
+true
+##true
+#dump
+
+##
+#destroy
+###!
+###!
+###!
+###!-----------------------------------------
+###2 call_registry: una entrada
+###!-----------------------------------------
+###!
+###!-----------------------------------------
+###2.1 insercio assignant
+###!-----------------------------------------
+#init c21 call_registry
+#as 102 "I-102"
+###!
+#c 101
+false
+##false
+#nom_cr 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c 102
+true
+##true
+#nom_cr 102
+I-102
+##I-102
+#num_trucades 102
+0
+##0
+#num_entrades
+0
+##1
+#es_buit
+false
+##false
+#dump
+102 I-102 0 
+##102 I-102 0 
+#e 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#e 102
+#c 102
+false
+##false
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_entrades
+0
+##0
+#es_buit
+true
+##true
+#dump
+
+##
+#destroy
+###!
+###!
+###!-----------------------------------------
+###2.2 insercio assignant i registrant
+###!-----------------------------------------
+###!
+#init c22 call_registry
+#as 102 "I-102"
+#r 102
+###!
+#c 102
+true
+##true
+#nom_cr 102
+I-102
+##I-102
+#num_trucades 102
+1
+##1
+#dump
+102 I-102 1 
+##102 I-102 1 
+###!
+#as 102 "I-102Bis"
+#c 102
+true
+##true
+#nom_cr 102
+I-102Bis
+##I-102Bis
+#num_trucades 102
+1
+##1
+#dump
+102 I-102Bis 1 
+##102 I-102Bis 1 
+#num_entrades
+0
+##1
+#es_buit
+false
+##false
+###!
+#e 102
+#c 102
+false
+##false
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_entrades
+0
+##0
+#es_buit
+true
+##true
+#dump
+
+##
+#destroy
+###!
+###!
+###!-----------------------------------------
+###2.3 insercio registrant
+###!-----------------------------------------
+###!
+#init c23 call_registry
+#r 102
+###!
+#c 101
+false
+##false
+#nom_cr 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c 102
+true
+##true
+#nom_cr 102
+
+##
+#num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 102
+1
+##1
+#num_entrades
+0
+##1
+#es_buit
+false
+##false
+#dump
+
+##
+#e 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#e 102
+#c 102
+false
+##false
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_entrades
+0
+##0
+#es_buit
+true
+##true
+#dump
+
+##
+#destroy
+###!
+###!
+###!-----------------------------------------
+###2.4 insercio registrant i assignant
+###!-----------------------------------------
+###!
+#init c24 call_registry
+#r 102
+#as 102 "I-102"
+###!
+#c 102
+true
+##true
+#nom_cr 102
+I-102
+##I-102
+#num_trucades 102
+1
+##1
+#dump
+102 I-102 1 
+##102 I-102 1 
+###!
+#as 102 "I-102Bis"
+#c 102
+true
+##true
+#nom_cr 102
+I-102Bis
+##I-102Bis
+#num_trucades 102
+1
+##1
+#dump
+102 I-102Bis 1 
+##102 I-102Bis 1 
+#num_entrades
+0
+##1
+#es_buit
+false
+##false
+###!
+#e 102
+#c 102
+false
+##false
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_entrades
+0
+##0
+#es_buit
+true
+##true
+#dump
+
+##
+#destroy
+###!
+###!
+###!
+###!-----------------------------------------
+###3 call_registry: dues entrada
+###!-----------------------------------------
+###!
+###!-----------------------------------------
+###3.1 insercio assignant
+###!-----------------------------------------
+###!
+#init c31 call_registry
+#as 101 "I-101"
+#as 103 "I-103"
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x124767: unsigned int const& std::max<unsigned int>(unsigned int const&, unsigned int const&) (stl_algobase.h:259)
+==1697==    by 0x12333C: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:152)
+==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
+==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x12336D: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:156)
+==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
+==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x1233FC: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:165)
+==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
+==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+#c 100
+false
+##false
+#c 101
+true
+##true
+#c 102
+false
+##false
+#c 103
+true
+##true
+#c 104
+false
+##false
+#nom_cr 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 101
+I-101
+##I-101
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 103
+I-103
+##I-103
+#nom_cr 104
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 101
+0
+##0
+#num_trucades 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 103
+0
+##0
+#num_trucades 104
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+101 I-101 0 103 I-103 0 
+##101 I-101 0 103 I-103 0 
+###!
+#r 101
+#c 101
+true
+##true
+#nom_cr 101
+I-101
+##I-101
+#num_trucades 101
+1
+##1
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+103 I-103 0 101 I-101 1 
+##103 I-103 0 101 I-101 1 
+###!
+#r 103
+#c 103
+true
+##true
+#nom_cr 103
+I-103
+##I-103
+#num_trucades 103
+1
+##1
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+101 I-101 1 103 I-103 1 
+##101 I-101 1 103 I-103 1 
+###!
+#as 101 "I-101Bis"
+#c 101
+true
+##true
+#nom_cr 101
+I-101Bis
+##I-101Bis
+#num_trucades 101
+1
+##1
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+101 I-101Bis 1 103 I-103 1 
+##101 I-101Bis 1 103 I-103 1 
+###!
+#as 103 "I-103Bis"
+#c 103
+true
+##true
+#nom_cr 103
+I-103Bis
+##I-103Bis
+#num_trucades 103
+1
+##1
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+101 I-101Bis 1 103 I-103Bis 1 
+##101 I-101Bis 1 103 I-103Bis 1 
+#destroy
+###!
+###!
+###!-----------------------------------------
+###3.2 insercio assignant+registrant
+###!-----------------------------------------
+###!
+#init c32 call_registry
+#as 101 "I-101"
+#r 103
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x124767: unsigned int const& std::max<unsigned int>(unsigned int const&, unsigned int const&) (stl_algobase.h:259)
+==1697==    by 0x12333C: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:152)
+==1697==    by 0x123A04: call_registry::registra_trucada(unsigned int) (call_registry.cpp:291)
+==1697==    by 0x11455D: tracta_registra_trucada(gen_driver&) (driver_easydial.cpp:170)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x12336D: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:156)
+==1697==    by 0x123A04: call_registry::registra_trucada(unsigned int) (call_registry.cpp:291)
+==1697==    by 0x11455D: tracta_registra_trucada(gen_driver&) (driver_easydial.cpp:170)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x1233FC: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:165)
+==1697==    by 0x123A04: call_registry::registra_trucada(unsigned int) (call_registry.cpp:291)
+==1697==    by 0x11455D: tracta_registra_trucada(gen_driver&) (driver_easydial.cpp:170)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+#c 100
+false
+##false
+#c 101
+true
+##true
+#c 102
+false
+##false
+#c 103
+true
+##true
+#c 104
+false
+##false
+#nom_cr 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 101
+I-101
+##I-101
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 103
+
+##
+#nom_cr 104
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 101
+0
+##0
+#num_trucades 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 103
+1
+##1
+#num_trucades 104
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+101 I-101 0 
+##101 I-101 0 
+###!
+#r 103
+#c 103
+true
+##true
+#nom_cr 103
+
+##
+#num_trucades 103
+2
+##2
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+101 I-101 0 
+##101 I-101 0 
+###!
+#as 103 "I-103"
+#c 103
+true
+##true
+#nom_cr 103
+I-103
+##I-103
+#num_trucades 103
+2
+##2
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+101 I-101 0 103 I-103 2 
+##101 I-101 0 103 I-103 2 
+#destroy
+###!
+###!
+###!-----------------------------------------
+###3.3 insercio registrant
+###!-----------------------------------------
+###!
+#init c33 call_registry
+#r 101
+#r 103
+#c 100
+false
+##false
+#c 101
+true
+##true
+#c 102
+false
+##false
+#c 103
+true
+##true
+#c 104
+false
+##false
+#nom_cr 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 101
+
+##
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 103
+
+##
+#nom_cr 104
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 101
+1
+##1
+#num_trucades 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 103
+1
+##1
+#num_trucades 104
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+
+##
+#r 101
+#c 101
+true
+##true
+#nom_cr 101
+
+##
+#num_trucades 101
+2
+##2
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+
+##
+#r 103
+#c 103
+true
+##true
+#nom_cr 103
+
+##
+#num_trucades 103
+2
+##2
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+
+##
+#as 101 "I-101"
+#as 103 "I-103"
+#dump
+101 I-101 2 103 I-103 2 
+##101 I-101 2 103 I-103 2 
+#destroy
+###!
+###!
+###!-----------------------------------------
+###3.4 insercio registrant+assignant
+###!-----------------------------------------
+###!
+#init c34 call_registry
+#r 101
+#as 103 "I-103"
+#c 100
+false
+##false
+#c 101
+true
+##true
+#c 102
+false
+##false
+#c 103
+true
+##true
+#c 104
+false
+##false
+#nom_cr 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 101
+
+##
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 103
+I-103
+##I-103
+#nom_cr 104
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 101
+1
+##1
+#num_trucades 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 103
+0
+##0
+#num_trucades 104
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+103 I-103 0 
+##103 I-103 0 
+###!
+#r 103
+#c 103
+true
+##true
+#nom_cr 103
+I-103
+##I-103
+#num_trucades 103
+1
+##1
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+103 I-103 1 
+##103 I-103 1 
+###!
+#r 101
+#as 101 "I-103"
+#c 101
+true
+##true
+#nom_cr 101
+I-103
+##I-103
+#num_trucades 101
+2
+##2
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+Error::call_registry:22:Nom repetit.
+##Error::call_registry:22:Nom repetit.
+#destroy
+###!
+###!
+###!-----------------------------------------
+###3.5 eliminar al principi
+###!-----------------------------------------
+###!
+#init c35 call_registry
+#r 101
+#as 103 "I-103"
+#dump
+103 I-103 0 
+##103 I-103 0 
+#e 101
+#c 101
+false
+##false
+#e 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c 103
+true
+##true
+#nom_cr 103
+I-103
+##I-103
+#num_trucades 103
+0
+##0
+#num_entrades
+0
+##1
+#es_buit
+false
+##false
+#dump
+103 I-103 0 
+##103 I-103 0 
+#destroy
+###!
+###!
+###!-----------------------------------------
+###3.6 eliminar al final
+###!-----------------------------------------
+###!
+#init c36 call_registry
+#r 101
+#as 103 "I-103"
+#e 103
+#c 100
+false
+##false
+#e 103
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c 103
+false
+##false
+#nom_cr 103
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 103
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c 101
+true
+##true
+#nom_cr 101
+
+##
+#num_trucades 101
+1
+##1
+#num_entrades
+0
+##1
+#es_buit
+false
+##false
+#dump
+
+##
+#destroy
+###!
+###!
+###!-----------------------------------------
+###3.7 eliminar+registrar principi
+###!-----------------------------------------
+###!
+#init c37 call_registry
+#as 101 "I-101"
+#as 103 "I-103"
+#dump
+101 I-101 0 103 I-103 0 
+##101 I-101 0 103 I-103 0 
+#e 101
+#dump
+103 I-103 0 
+##103 I-103 0 
+#r 101
+#c 103
+true
+##true
+#nom_cr 103
+I-103
+##I-103
+#num_trucades 103
+0
+##0
+#c 101
+true
+##true
+#nom_cr 101
+
+##
+#num_trucades 101
+1
+##1
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+103 I-103 0 
+##103 I-103 0 
+###!
+#as 101 "I-101Bis"
+#dump
+103 I-103 0 101 I-101Bis 1 
+##103 I-103 0 101 I-101Bis 1 
+#destroy
+###!
+###!
+###!-----------------------------------------
+###3.8 eliminar+registrar final
+###!-----------------------------------------
+###!
+#init c38 call_registry
+#r 101
+#as 103 "I-103"
+#e 103
+#dump
+
+##
+#r 103
+#c 103
+true
+##true
+#nom_cr 103
+
+##
+#num_trucades 103
+1
+##1
+#c 101
+true
+##true
+#nom_cr 101
+
+##
+#num_trucades 101
+1
+##1
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+
+##
+#destroy
+###!
+###!
+###!
+###!-----------------------------------------
+###4 call_registry: tres entrada
+###!-----------------------------------------
+###!
+###!-----------------------------------------
+###4.1 insercio as+as+as
+###!-----------------------------------------
+###!
+#init c41 call_registry
+#as 103 "I-103"
+#as 101 "I-101"
+#c 102
+false
+##false
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#dump
+101 I-101 0 103 I-103 0 
+##101 I-101 0 103 I-103 0 
+###!
+#as 102 "I-102"
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x124767: unsigned int const& std::max<unsigned int>(unsigned int const&, unsigned int const&) (stl_algobase.h:259)
+==1697==    by 0x12333C: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:152)
+==1697==    by 0x1232C5: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:146)
+==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
+==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x12336D: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:156)
+==1697==    by 0x1232C5: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:146)
+==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
+==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x1233FC: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:165)
+==1697==    by 0x1232C5: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:146)
+==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
+==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+#c 101
+true
+##true
+#c 102
+true
+##true
+#c 103
+true
+##true
+#nom_cr 101
+I-101
+##I-101
+#nom_cr 102
+I-102
+##I-102
+#nom_cr 103
+I-103
+##I-103
+#num_trucades 101
+0
+##0
+#num_trucades 102
+0
+##0
+#num_trucades 103
+0
+##0
+#num_entrades
+3
+##3
+#es_buit
+false
+##false
+#dump
+101 I-101 0 102 I-102 0 103 I-103 0 
+##101 I-101 0 102 I-102 0 103 I-103 0 
+###!
+#r 102
+#c 102
+true
+##true
+#nom_cr 102
+I-102
+##I-102
+#num_trucades 102
+1
+##1
+#num_entrades
+3
+##3
+#es_buit
+false
+##false
+#dump
+101 I-101 0 103 I-103 0 102 I-102 1 
+##101 I-101 0 103 I-103 0 102 I-102 1 
+###!
+#as 102 "I-102Bis"
+#c 102
+true
+##true
+#nom_cr 102
+I-102Bis
+##I-102Bis
+#num_trucades 102
+1
+##1
+#num_entrades
+3
+##3
+#es_buit
+false
+##false
+#dump
+101 I-101 0 103 I-103 0 102 I-102Bis 1 
+##101 I-101 0 103 I-103 0 102 I-102Bis 1 
+#destroy
+###!
+###!
+###!-----------------------------------------
+###.4.2 insercio as+as+r
+###!-----------------------------------------
+###!
+#init c42 call_registry
+#as 103 "I-103"
+#as 101 "I-101"
+#c 102
+false
+##false
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#dump
+101 I-101 0 103 I-103 0 
+##101 I-101 0 103 I-103 0 
+###!
+#r 102
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x124767: unsigned int const& std::max<unsigned int>(unsigned int const&, unsigned int const&) (stl_algobase.h:259)
+==1697==    by 0x12333C: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:152)
+==1697==    by 0x1232C5: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:146)
+==1697==    by 0x123A04: call_registry::registra_trucada(unsigned int) (call_registry.cpp:291)
+==1697==    by 0x11455D: tracta_registra_trucada(gen_driver&) (driver_easydial.cpp:170)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x12336D: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:156)
+==1697==    by 0x1232C5: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:146)
+==1697==    by 0x123A04: call_registry::registra_trucada(unsigned int) (call_registry.cpp:291)
+==1697==    by 0x11455D: tracta_registra_trucada(gen_driver&) (driver_easydial.cpp:170)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x1233FC: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:165)
+==1697==    by 0x1232C5: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:146)
+==1697==    by 0x123A04: call_registry::registra_trucada(unsigned int) (call_registry.cpp:291)
+==1697==    by 0x11455D: tracta_registra_trucada(gen_driver&) (driver_easydial.cpp:170)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+#c 101
+true
+##true
+#c 102
+true
+##true
+#c 103
+true
+##true
+#nom_cr 101
+I-101
+##I-101
+#nom_cr 102
+
+##
+#nom_cr 103
+I-103
+##I-103
+#num_trucades 101
+0
+##0
+#num_trucades 102
+1
+##1
+#num_trucades 103
+0
+##0
+#num_entrades
+3
+##3
+#es_buit
+false
+##false
+#dump
+101 I-101 0 103 I-103 0 
+##101 I-101 0 103 I-103 0 
+###!
+#r 102
+#c 102
+true
+##true
+#nom_cr 102
+
+##
+#num_trucades 102
+2
+##2
+#num_entrades
+3
+##3
+#es_buit
+false
+##false
+#dump
+101 I-101 0 103 I-103 0 
+##101 I-101 0 103 I-103 0 
+###!
+#as 102 "I-102Bis"
+#c 102
+true
+##true
+#nom_cr 102
+I-102Bis
+##I-102Bis
+#num_trucades 102
+2
+##2
+#num_entrades
+3
+##3
+#es_buit
+false
+##false
+#dump
+101 I-101 0 103 I-103 0 102 I-102Bis 2 
+##101 I-101 0 103 I-103 0 102 I-102Bis 2 
+#destroy
+###!
+###!
+###!-----------------------------------------
+###.4.3 insercio as+r+as
+###!-----------------------------------------
+###!
+#init c43 call_registry
+#as 103 "I-103"
+#r 101
+#c 102
+false
+##false
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#dump
+103 I-103 0 
+##103 I-103 0 
+###!
+#as 102 "I-102"
+#c 101
+true
+##true
+#c 102
+true
+##true
+#c 103
+true
+##true
+#nom_cr 101
+
+##
+#nom_cr 102
+I-102
+##I-102
+#nom_cr 103
+I-103
+##I-103
+#num_trucades 101
+1
+##1
+#num_trucades 102
+0
+##0
+#num_trucades 103
+0
+##0
+#num_entrades
+3
+##3
+#es_buit
+false
+##false
+#dump
+102 I-102 0 103 I-103 0 
+##102 I-102 0 103 I-103 0 
+###!
+#as 102 "I-102Bis"
+#c 102
+true
+##true
+#nom_cr 102
+I-102Bis
+##I-102Bis
+#num_trucades 102
+0
+##0
+#num_entrades
+3
+##3
+#es_buit
+false
+##false
+#dump
+102 I-102Bis 0 103 I-103 0 
+##102 I-102Bis 0 103 I-103 0 
+###!
+#r 102
+#c 102
+true
+##true
+#nom_cr 102
+I-102Bis
+##I-102Bis
+#num_trucades 102
+1
+##1
+#num_entrades
+3
+##3
+#es_buit
+false
+##false
+#dump
+103 I-103 0 102 I-102Bis 1 
+##103 I-103 0 102 I-102Bis 1 
+#as 102 "I-103"
+#dump
+Error::call_registry:22:Nom repetit.
+##Error::call_registry:22:Nom repetit.
+#destroy
+###!
+###!
+###!-----------------------------------------
+###.4.4 insercio as+r+r
+###!-----------------------------------------
+###!
+#init c44 call_registry
+#as 103 "I-103"
+#r 101
+#c 102
+false
+##false
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#dump
+103 I-103 0 
+##103 I-103 0 
+###!
+#r 102
+#c 101
+true
+##true
+#c 102
+true
+##true
+#c 103
+true
+##true
+#nom_cr 101
+
+##
+#nom_cr 102
+
+##
+#nom_cr 103
+I-103
+##I-103
+#num_trucades 101
+1
+##1
+#num_trucades 102
+1
+##1
+#num_trucades 103
+0
+##0
+#num_entrades
+3
+##3
+#es_buit
+false
+##false
+#dump
+103 I-103 0 
+##103 I-103 0 
+###!
+#as 102 "I-102"
+#c 102
+true
+##true
+#nom_cr 102
+I-102
+##I-102
+#num_trucades 102
+1
+##1
+#num_entrades
+3
+##3
+#es_buit
+false
+##false
+#dump
+103 I-103 0 102 I-102 1 
+##103 I-103 0 102 I-102 1 
+###!
+#r 102
+#c 102
+true
+##true
+#nom_cr 102
+I-102
+##I-102
+#num_trucades 102
+2
+##2
+#num_entrades
+3
+##3
+#es_buit
+false
+##false
+#dump
+103 I-103 0 102 I-102 2 
+##103 I-103 0 102 I-102 2 
+#as 101 "I-102"
+#dump
+Error::call_registry:22:Nom repetit.
+##Error::call_registry:22:Nom repetit.
+#destroy
+###!
+###!
+###!-----------------------------------------
+###.4.5 insercio r+as+as
+###!-----------------------------------------
+###!
+#init c45 call_registry
+#r 103
+#as 101 "I-101"
+#c 102
+false
+##false
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#dump
+101 I-101 0 
+##101 I-101 0 
+###!
+#as 102 "I-102"
+#c 101
+true
+##true
+#c 102
+true
+##true
+#c 103
+true
+##true
+#nom_cr 101
+I-101
+##I-101
+#nom_cr 102
+I-102
+##I-102
+#nom_cr 103
+
+##
+#num_trucades 101
+0
+##0
+#num_trucades 102
+0
+##0
+#num_trucades 103
+1
+##1
+#num_entrades
+3
+##3
+#es_buit
+false
+##false
+#dump
+101 I-101 0 102 I-102 0 
+##101 I-101 0 102 I-102 0 
+#destroy
+###!
+###!
+###!-----------------------------------------
+###.4.6 insercio r+as+r
+###!-----------------------------------------
+###!
+#init c46 call_registry
+#r 103
+#as 101 "I-101"
+#c 102
+false
+##false
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#dump
+101 I-101 0 
+##101 I-101 0 
+###!
+#r 102
+#c 101
+true
+##true
+#c 102
+true
+##true
+#c 103
+true
+##true
+#nom_cr 101
+I-101
+##I-101
+#nom_cr 102
+
+##
+#nom_cr 103
+
+##
+#num_trucades 101
+0
+##0
+#num_trucades 102
+1
+##1
+#num_trucades 103
+1
+##1
+#num_entrades
+3
+##3
+#es_buit
+false
+##false
+#dump
+101 I-101 0 
+##101 I-101 0 
+#destroy
+###!
+###!
+###!-----------------------------------------
+###.4.7 insercio r+r+as
+###!-----------------------------------------
+###!
+#init c47 call_registry
+#r 103
+#r 101
+#c 102
+false
+##false
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#dump
+
+##
+#as 102 "I-102"
+#c 101
+true
+##true
+#c 102
+true
+##true
+#c 103
+true
+##true
+#nom_cr 101
+
+##
+#nom_cr 102
+I-102
+##I-102
+#nom_cr 103
+
+##
+#num_trucades 101
+1
+##1
+#num_trucades 102
+0
+##0
+#num_trucades 103
+1
+##1
+#num_entrades
+3
+##3
+#es_buit
+false
+##false
+#dump
+102 I-102 0 
+##102 I-102 0 
+#destroy
+###!
+###!
+###!-----------------------------------------
+###.4.8 insercio r+r+r
+###!-----------------------------------------
+###!
+#init c48 call_registry
+#r 103
+#r 101
+#c 102
+false
+##false
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#dump
+
+##
+#r 102
+#c 101
+true
+##true
+#c 102
+true
+##true
+#c 103
+true
+##true
+#nom_cr 101
+
+##
+#nom_cr 102
+
+##
+#nom_cr 103
+
+##
+#num_trucades 101
+1
+##1
+#num_trucades 102
+1
+##1
+#num_trucades 103
+1
+##1
+#num_entrades
+3
+##3
+#es_buit
+false
+##false
+#dump
+
+##
+#destroy
+###!
+###!
+###!-----------------------------------------
+###4.9 eliminar as
+###!-----------------------------------------
+###!
+#init c49 call_registry
+#r 103
+#as 101 "I-101"
+#as 102 "I-102"
+#e 102
+#c 102
+false
+##false
+#e 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c 103
+true
+##true
+#nom_cr 103
+
+##
+#num_trucades 103
+1
+##1
+#c 101
+true
+##true
+#nom_cr 101
+I-101
+##I-101
+#num_trucades 101
+0
+##0
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+101 I-101 0 
+##101 I-101 0 
+#destroy
+###!
+###!
+###!-----------------------------------------
+###4.10 eliminar as
+###!-----------------------------------------
+###!
+#init c410 call_registry
+#as 103 "I-103"
+#r 101
+#r 102
+#e 102
+#c 102
+false
+##false
+#e 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 102
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c 103
+true
+##true
+#nom_cr 103
+I-103
+##I-103
+#num_trucades 103
+0
+##0
+#c 101
+true
+##true
+#nom_cr 101
+
+##
+#num_trucades 101
+1
+##1
+#num_entrades
+1
+##2
+#es_buit
+false
+##false
+#dump
+103 I-103 0 
+##103 I-103 0 
+#destroy
+###!
+###!
+###!-----------------------------------------
+###4.11 eliminar + assignar
+###!-----------------------------------------
+###!
+#init c411 call_registry
+#as 103 "I-103"
+#r 101
+#r 102
+#dump
+103 I-103 0 
+##103 I-103 0 
+#e 102
+#dump
+103 I-103 0 
+##103 I-103 0 
+###!
+#as 102 "I-102"
+#c 102
+true
+##true
+#num_trucades 102
+0
+##0
+#nom_cr 102
+I-102
+##I-102
+#dump
+102 I-102 0 103 I-103 0 
+##102 I-102 0 103 I-103 0 
+#destroy
+###!
+###!
+###!
+###!-----------------------------------------
+###5 Call_Registry: 31 entrades
+###!-----------------------------------------
+###!
+###!-----------------------------------------
+###5.1 assigna creixent
+###!-----------------------------------------
+###!
+#init c51 call_registry
+#as 101 "I-101"
+#as 102 "I-102"
+#as 103 "I-103"
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x124767: unsigned int const& std::max<unsigned int>(unsigned int const&, unsigned int const&) (stl_algobase.h:259)
+==1697==    by 0x12333C: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:152)
+==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
+==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
+==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x12336D: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:156)
+==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
+==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
+==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x1233FC: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:165)
+==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
+==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
+==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+#as 104 "I-104"
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x124767: unsigned int const& std::max<unsigned int>(unsigned int const&, unsigned int const&) (stl_algobase.h:259)
+==1697==    by 0x12333C: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:152)
+==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
+==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
+==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
+==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x12336D: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:156)
+==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
+==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
+==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
+==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+==1697== Conditional jump or move depends on uninitialised value(s)
+==1697==    at 0x1233FC: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:165)
+==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
+==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
+==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
+==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697== 
+#as 105 "I-105"
+==1697== Invalid read of size 8
+==1697==    at 0x122FD6: call_registry::rotacio_esquerra(call_registry::node*) (call_registry.cpp:89)
+==1697==    by 0x1233DB: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:160)
+==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
+==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697==  Address 0x28 is not stack'd, malloc'd or (recently) free'd
+==1697== 
+==1697== 
+==1697== Process terminating with default action of signal 11 (SIGSEGV)
+==1697==  Access not within mapped region at address 0x28
+==1697==    at 0x122FD6: call_registry::rotacio_esquerra(call_registry::node*) (call_registry.cpp:89)
+==1697==    by 0x1233DB: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:160)
+==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
+==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
+==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
+==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
+==1697==    by 0x118637: main (driver_easydial.cpp:317)
+==1697==  If you believe this happened as a result of a stack
+==1697==  overflow in your program's main thread (unlikely but
+==1697==  possible), you can try to increase the size of the
+==1697==  main thread stack using the --main-stacksize= flag.
+==1697==  The main thread stack size used in this run was 8388608.
+==1697== 
+==1697== HEAP SUMMARY:
+==1697==     in use at exit: 110,576 bytes in 372 blocks
+==1697==   total heap usage: 1,252 allocs, 880 frees, 169,004 bytes allocated
+==1697== 
+==1697== LEAK SUMMARY:
+==1697==    definitely lost: 0 bytes in 0 blocks
+==1697==    indirectly lost: 0 bytes in 0 blocks
+==1697==      possibly lost: 0 bytes in 0 blocks
+==1697==    still reachable: 110,576 bytes in 372 blocks
+==1697==         suppressed: 0 bytes in 0 blocks
+==1697== Rerun with --leak-check=full to see details of leaked memory
+==1697== 
+==1697== Use --track-origins=yes to see where uninitialised values come from
+==1697== For lists of detected and suppressed errors, rerun with: -s
+==1697== ERROR SUMMARY: 112 errors from 19 contexts (suppressed: 0 from 0)

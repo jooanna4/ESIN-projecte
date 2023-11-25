@@ -1,6 +1,6 @@
 #include "call_registry.hpp"
 
-/*  *********************  MÈTODES PRIVATS  *********************  */
+/*----------------------< MÈTODES PRIVATS >-----------------------*/
 nat call_registry::altura(node *n) {
 // Pre: cert
 // Post: retorna l'altura de l'arbre amb arrel n
@@ -83,36 +83,50 @@ call_registry::node* call_registry::rotacio_esquerra(node *n) {
 // Pre: cert
 // Post: retorna el node arrel de l'arbre AVL després de realitzar
 //       una rotació cap a l'esquerra del node arrel n inicial
-    node *nova_n = n->_dret;
-    node *aux = nova_n->_esq;
+    if (n != nullptr) {
+        node *nova_n = n->_dret;
+        node *aux(nullptr);
+        if (nova_n->_esq != nullptr)
+            aux = nova_n->_esq;
 
-    // Intercanvi de nodes
-    nova_n->_esq = n;
-    n->_dret = aux;
+        // Intercanvi de nodes
+        if (nova_n != nullptr)
+            nova_n->_esq = n;
+        n->_dret = aux;
 
-    // S'actualitzen les altures
-    n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
-    nova_n->_altura = max(altura(nova_n->_esq), altura(nova_n->_dret)) + 1;
+        // S'actualitzen les altures
+        n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
+        if (nova_n != nullptr)
+            nova_n->_altura = max(altura(nova_n->_esq), altura(nova_n->_dret)) + 1;
+        n = nova_n;
+    }
 
-    return nova_n;
+    return n;
 }
 
 call_registry::node* call_registry::rotacio_dreta(node *n) {
 // Pre: cert
 // Post: retorna el node arrel de l'arbre AVL després de realitzar
 //       una rotació cap a la dreta del node arrel n inicial
-    node *nova_n = n->_esq;
-    node *aux = nova_n->_dret;
+    if (n != nullptr) {
+        node *nova_n = n->_esq;
+        node *aux (nullptr);
+        if (nova_n->_dret != nullptr)
+            aux = nova_n->_dret;
 
-    // Intercanvi de nodes
-    nova_n->_dret = n;
-    n->_esq = aux;
+        // Intercanvi de nodes
+        if (nova_n != nullptr)
+            nova_n->_dret = n;
+        n->_esq = aux;
 
-    // S'actualitzen les altures
-    n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
-    nova_n->_altura = max(altura(nova_n->_esq), altura(nova_n->_dret)) + 1;
+        // S'actualitzen les altures
+        n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
+        if (nova_n != nullptr)
+            nova_n->_altura = max(altura(nova_n->_esq), altura(nova_n->_dret)) + 1;
+        n = nova_n;
+    }
 
-    return nova_n;
+    return n;
 }
 
 call_registry::node* call_registry::insereix_numero(node *n, nat num, const string& name, nat compt) {
@@ -127,28 +141,33 @@ call_registry::node* call_registry::insereix_numero(node *n, nat num, const stri
         aux->_dret = nullptr;
         return aux;
     }
-    else if (num < n->_ph.numero())
-        n->_esq = insereix_numero(n->_esq, num, name, compt);
-    else
-        n->_dret = insereix_numero(n->_dret, num, name, compt);
+    else {
+        if (num < n->_ph.numero())
+            n->_esq = insereix_numero(n->_esq, num, name, compt);
+        else
+            n->_dret = insereix_numero(n->_dret, num, name, compt);
     
-    n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
-    _mida++;
-    nat fact = factor_equilibri(n);
-
-    if (fact > 1 && num < n->_esq->_ph.numero())
-        return rotacio_dreta(n);
+        n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
+        _mida++;
+        nat fact = factor_equilibri(n);
     
-    if (fact < -1 && num > n->_dret->_ph.numero())
-        return rotacio_esquerra(n);
-    
-    if (fact > 1 && num > n->_esq->_ph.numero()) {
-        n->_esq = rotacio_esquerra(n->_esq);
-        return rotacio_dreta(n);
-    }
-    if (fact < -1 && num < n->_dret->_ph.numero()) {
-        n->_dret = rotacio_dreta(n->_dret);
-        return rotacio_esquerra(n);
+        if (fact > 1 && n->_esq != nullptr) {
+            if (num < n->_esq->_ph.numero())
+                return rotacio_dreta(n);
+            else if (num > n->_esq->_ph.numero()) {
+                n->_esq = rotacio_esquerra(n->_esq);
+                return rotacio_dreta(n);
+            }
+        }
+        
+        else if (fact < -1 && n->_dret != nullptr) {
+            if (num > n->_dret->_ph.numero())
+                return rotacio_esquerra(n);
+            else if (num < n->_dret->_ph.numero()) {
+                n->_dret = rotacio_dreta(n->_dret);
+                return rotacio_esquerra(n);
+            }
+        }
     }
 
     return n;
@@ -159,35 +178,38 @@ call_registry::node* call_registry::elimina_numero(node *n, nat num) {
 // Pre: el número num existeix en l'arbre AVL amb arrel n
 // Post: retorna l'arrel de l'arbre AVL actualitzat amb l'eliminació del
 //       número num mantenint totes les propietats de l'arbre AVL
+    node *aux = n;
     if (n != nullptr) {
         if (num < n->_ph.numero())
             n->_esq = elimina_numero(n->_esq, num);
         else if (num > n->_ph.numero())
             n->_dret = elimina_numero(n->_dret, num);
         else {
-            node *aux = ajunta (n->_esq, n->_dret);
-            delete (n);
-            return aux;
+            n = ajunta (n->_esq, n->_dret);
+            delete (aux);
         }
-    }
-    
-    n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
-    _mida--;
-    nat fact = factor_equilibri(n);
 
-    if (fact > 1 && num < n->_esq->_ph.numero())
-        return rotacio_dreta(n);
-    
-    if (fact < -1 && num > n->_dret->_ph.numero())
-        return rotacio_esquerra(n);
-    
-    if (fact > 1 && num > n->_esq->_ph.numero()) {
-        n->_esq = rotacio_esquerra(n->_esq);
-        return rotacio_dreta(n);
-    }
-    if (fact < -1 && num < n->_dret->_ph.numero()) {
-        n->_dret = rotacio_dreta(n->_dret);
-        return rotacio_esquerra(n);
+        n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
+        _mida--;
+        nat fact = factor_equilibri(n);
+
+        if (fact > 1 && n->_esq != nullptr) {
+            if (num < n->_esq->_ph.numero())
+                return rotacio_dreta(n);
+            else if (num > n->_esq->_ph.numero()) {
+                n->_esq = rotacio_esquerra(n->_esq);
+                return rotacio_dreta(n);
+            }
+        }
+        
+        else if (fact < -1 && n->_dret != nullptr) {
+            if (num > n->_dret->_ph.numero())
+                return rotacio_esquerra(n);
+            else if (num < n->_dret->_ph.numero()) {
+                n->_dret = rotacio_dreta(n->_dret);
+                return rotacio_esquerra(n);
+            }
+        }
     }
 
     return n;
@@ -197,17 +219,19 @@ call_registry::node* call_registry::ajunta(node* n1, node* n2) {
 // Pre: Cert
 // Post: retorna l'arbre resultant de fusionar n1 i n2
 //       mantenint totes les propietats de l'arbre BST
+    node *n;
     if (n1 == nullptr) 
-        return n2;
+        n = n2;
     
     else if (n2 == nullptr)
-        return n1;
+        n = n1;
 
     else {
         node *aux = elimina_maxim(n1);
         aux->_dret = n2;
-        return aux;
+        n = aux;
     }
+    return n;
 }
 
 call_registry::node* call_registry::elimina_maxim(node *n) {
@@ -227,7 +251,7 @@ call_registry::node* call_registry::elimina_maxim(node *n) {
 }
 
 
-/*  *********************  MÈTODES PÚBLICS  *********************  */
+/*----------------------< MÈTODES PÚBLICS >-----------------------*/
 call_registry::call_registry() throw(error) : _arrel(nullptr), _mida(0) {}
 
 call_registry::call_registry(const call_registry& R) throw(error) : _mida(R._mida) {
