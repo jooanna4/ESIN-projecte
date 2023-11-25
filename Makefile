@@ -9,7 +9,7 @@ driver_easydial.o: driver_easydial.cpp
 phone.o: phone.cpp phone.hpp
 	g++ -c phone.cpp $(OPCIONS)
 
-call_registry.o: call_registry.cpp call_registry.hpp
+call_registry.o: call_registry.cpp call_registry.hpp phone.cpp phone.hpp
 	g++ -c call_registry.cpp $(OPCIONS)
 
 easy_dial.o: easy_dial.cpp easy_dial.hpp

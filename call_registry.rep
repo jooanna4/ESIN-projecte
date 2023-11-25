@@ -15,17 +15,18 @@ nat _mida;              // Número de telefons que hi ha en l'arbre AVL
 static nat altura(node *n);
 static nat factor_equilibri(node *n);
 static node* busca(node *n, nat num);        // Busca el telefon num dintre del AVL amb arrel n
+static void rec_inordre(node *n, vector<phone>& V);
 
 // Mètodes privats per la constructora i destructora
 static node* copia_arbre(node *n);
 static void esborra_arbre(node *n);
 
 // Metodes privats per inserir un numero a l'AVL
-static node* insereix_numero(node *n, nat num, const string& name, nat compt);
+node* insereix_numero(node *n, nat num, const string& name, nat compt);
 static node* rotacio_esquerra(node *n);
 static node* rotacio_dreta(node *n);
 
 // Metodes privats per eliminar un numero a l'AVL
-static node* elimina_numero(node *n, nat num);
+node* elimina_numero(node *n, nat num);
 static node* ajunta(node* n1, node* n2);
 static node* elimina_maxim(node *n);

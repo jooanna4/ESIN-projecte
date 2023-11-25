@@ -35,6 +35,18 @@ call_registry::node* call_registry::busca(node *n, nat num) {
     return n;
 }
 
+void call_registry::rec_inordre(node *n, vector<phone>& V) {
+// Pre: el vector V és buit
+// Post: el vector V conté totes les entrades phone de l'arbre
+//       amb arrel n que no tenen un nom nul
+    if (n != nullptr) {
+        rec_inordre(n->_esq, V);
+        if (n->_ph.nom() != "")
+            V.push_back(n->_ph);
+        rec_inordre(n->_dret, V);
+    }
+}
+
 // Mètodes privats per la constructora i destructora
 call_registry::node* call_registry::copia_arbre(node *n) {
 // Pre: Cert
@@ -147,7 +159,6 @@ call_registry::node* call_registry::elimina_numero(node *n, nat num) {
 // Pre: el número num existeix en l'arbre AVL amb arrel n
 // Post: retorna l'arrel de l'arbre AVL actualitzat amb l'eliminació del
 //       número num mantenint totes les propietats de l'arbre AVL
-    node *aux = n;
     if (n != nullptr) {
         if (num < n->_ph.numero())
             n->_esq = elimina_numero(n->_esq, num);
@@ -227,10 +238,10 @@ call_registry& call_registry::operator=(const call_registry& R) throw(error) {
 // Pre: cert
 // Post: el paràmetre implícit és una còpia de R
     _mida = R._mida;
-    if (*this != R) {
+    //if (this != R) {          (s'hauria de fer l'operator == i !=)
         esborra_arbre(_arrel);
         _arrel = copia_arbre(R._arrel);
-    }
+    //}
     return *this;
 }
 
@@ -333,5 +344,14 @@ nat call_registry::num_entrades() const throw() {
 }
 
 void call_registry::dump(vector<phone>& V) const throw(error) {
+    rec_inordre(_arrel, V);
 
+    // Comprovem si hi ha noms repetits
+    for (nat i = 0; i < V.size(); ++i) {
+        for (nat j = i + 1; j < V.size(); ++j) {
+            if (V[i].nom() == V[j].nom()) {
+                throw error(ErrNomRepetit);
+            }
+        }
+    }
 }
