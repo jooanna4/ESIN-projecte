@@ -1,9 +1,3 @@
-==1697== Memcheck, a memory error detector
-==1697== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==1697== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==1697== Command: ./program.exe
-==1697== 
-==1697== error calling PR_SET_PTRACER, vgdb might block
 ###!-----------------------------------------
 ###!
 ###! MODUL CALL_REGISTRY
@@ -67,7 +61,7 @@ I-102
 0
 ##0
 #num_entrades
-0
+1
 ##1
 #es_buit
 false
@@ -135,7 +129,7 @@ I-102Bis
 102 I-102Bis 1 
 ##102 I-102Bis 1 
 #num_entrades
-0
+1
 ##1
 #es_buit
 false
@@ -189,7 +183,7 @@ Error::call_registry:21:Numero inexistent.
 1
 ##1
 #num_entrades
-0
+1
 ##1
 #es_buit
 false
@@ -257,7 +251,7 @@ I-102Bis
 102 I-102Bis 1 
 ##102 I-102Bis 1 
 #num_entrades
-0
+1
 ##1
 #es_buit
 false
@@ -297,31 +291,6 @@ true
 #init c31 call_registry
 #as 101 "I-101"
 #as 103 "I-103"
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x124767: unsigned int const& std::max<unsigned int>(unsigned int const&, unsigned int const&) (stl_algobase.h:259)
-==1697==    by 0x12333C: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:152)
-==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
-==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x12336D: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:156)
-==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
-==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x1233FC: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:165)
-==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
-==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
 #c 100
 false
 ##false
@@ -368,7 +337,7 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_entrades
-1
+3
 ##2
 #es_buit
 false
@@ -388,7 +357,7 @@ I-101
 1
 ##1
 #num_entrades
-1
+3
 ##2
 #es_buit
 false
@@ -408,7 +377,7 @@ I-103
 1
 ##1
 #num_entrades
-1
+3
 ##2
 #es_buit
 false
@@ -428,7 +397,7 @@ I-101Bis
 1
 ##1
 #num_entrades
-1
+3
 ##2
 #es_buit
 false
@@ -448,7 +417,7 @@ I-103Bis
 1
 ##1
 #num_entrades
-1
+3
 ##2
 #es_buit
 false
@@ -466,31 +435,6 @@ false
 #init c32 call_registry
 #as 101 "I-101"
 #r 103
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x124767: unsigned int const& std::max<unsigned int>(unsigned int const&, unsigned int const&) (stl_algobase.h:259)
-==1697==    by 0x12333C: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:152)
-==1697==    by 0x123A04: call_registry::registra_trucada(unsigned int) (call_registry.cpp:291)
-==1697==    by 0x11455D: tracta_registra_trucada(gen_driver&) (driver_easydial.cpp:170)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x12336D: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:156)
-==1697==    by 0x123A04: call_registry::registra_trucada(unsigned int) (call_registry.cpp:291)
-==1697==    by 0x11455D: tracta_registra_trucada(gen_driver&) (driver_easydial.cpp:170)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x1233FC: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:165)
-==1697==    by 0x123A04: call_registry::registra_trucada(unsigned int) (call_registry.cpp:291)
-==1697==    by 0x11455D: tracta_registra_trucada(gen_driver&) (driver_easydial.cpp:170)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
 #c 100
 false
 ##false
@@ -537,7 +481,7 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_entrades
-1
+3
 ##2
 #es_buit
 false
@@ -557,7 +501,7 @@ true
 2
 ##2
 #num_entrades
-1
+3
 ##2
 #es_buit
 false
@@ -577,7 +521,7 @@ I-103
 2
 ##2
 #num_entrades
-1
+3
 ##2
 #es_buit
 false
@@ -641,7 +585,7 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_entrades
-1
+3
 ##2
 #es_buit
 false
@@ -660,7 +604,7 @@ true
 2
 ##2
 #num_entrades
-1
+3
 ##2
 #es_buit
 false
@@ -679,7 +623,7 @@ true
 2
 ##2
 #num_entrades
-1
+3
 ##2
 #es_buit
 false
@@ -748,7 +692,7 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_entrades
-1
+3
 ##2
 #es_buit
 false
@@ -768,7 +712,7 @@ I-103
 1
 ##1
 #num_entrades
-1
+3
 ##2
 #es_buit
 false
@@ -789,7 +733,7 @@ I-103
 2
 ##2
 #num_entrades
-1
+3
 ##2
 #es_buit
 false
@@ -833,7 +777,7 @@ I-103
 0
 ##0
 #num_entrades
-0
+2
 ##1
 #es_buit
 false
@@ -877,7 +821,7 @@ true
 1
 ##1
 #num_entrades
-0
+2
 ##1
 #es_buit
 false
@@ -922,7 +866,7 @@ true
 1
 ##1
 #num_entrades
-1
+4
 ##2
 #es_buit
 false
@@ -969,7 +913,7 @@ true
 1
 ##1
 #num_entrades
-1
+4
 ##2
 #es_buit
 false
@@ -1003,34 +947,6 @@ Error::call_registry:21:Numero inexistent.
 ##101 I-101 0 103 I-103 0 
 ###!
 #as 102 "I-102"
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x124767: unsigned int const& std::max<unsigned int>(unsigned int const&, unsigned int const&) (stl_algobase.h:259)
-==1697==    by 0x12333C: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:152)
-==1697==    by 0x1232C5: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:146)
-==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
-==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x12336D: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:156)
-==1697==    by 0x1232C5: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:146)
-==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
-==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x1233FC: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:165)
-==1697==    by 0x1232C5: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:146)
-==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
-==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
 #c 101
 true
 ##true
@@ -1059,7 +975,7 @@ I-103
 0
 ##0
 #num_entrades
-3
+6
 ##3
 #es_buit
 false
@@ -1079,7 +995,7 @@ I-102
 1
 ##1
 #num_entrades
-3
+6
 ##3
 #es_buit
 false
@@ -1099,7 +1015,7 @@ I-102Bis
 1
 ##1
 #num_entrades
-3
+6
 ##3
 #es_buit
 false
@@ -1128,34 +1044,6 @@ Error::call_registry:21:Numero inexistent.
 ##101 I-101 0 103 I-103 0 
 ###!
 #r 102
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x124767: unsigned int const& std::max<unsigned int>(unsigned int const&, unsigned int const&) (stl_algobase.h:259)
-==1697==    by 0x12333C: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:152)
-==1697==    by 0x1232C5: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:146)
-==1697==    by 0x123A04: call_registry::registra_trucada(unsigned int) (call_registry.cpp:291)
-==1697==    by 0x11455D: tracta_registra_trucada(gen_driver&) (driver_easydial.cpp:170)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x12336D: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:156)
-==1697==    by 0x1232C5: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:146)
-==1697==    by 0x123A04: call_registry::registra_trucada(unsigned int) (call_registry.cpp:291)
-==1697==    by 0x11455D: tracta_registra_trucada(gen_driver&) (driver_easydial.cpp:170)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x1233FC: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:165)
-==1697==    by 0x1232C5: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:146)
-==1697==    by 0x123A04: call_registry::registra_trucada(unsigned int) (call_registry.cpp:291)
-==1697==    by 0x11455D: tracta_registra_trucada(gen_driver&) (driver_easydial.cpp:170)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
 #c 101
 true
 ##true
@@ -1184,7 +1072,7 @@ I-103
 0
 ##0
 #num_entrades
-3
+6
 ##3
 #es_buit
 false
@@ -1204,7 +1092,7 @@ true
 2
 ##2
 #num_entrades
-3
+6
 ##3
 #es_buit
 false
@@ -1224,7 +1112,7 @@ I-102Bis
 2
 ##2
 #num_entrades
-3
+6
 ##3
 #es_buit
 false
@@ -1281,7 +1169,7 @@ I-103
 0
 ##0
 #num_entrades
-3
+6
 ##3
 #es_buit
 false
@@ -1301,7 +1189,7 @@ I-102Bis
 0
 ##0
 #num_entrades
-3
+6
 ##3
 #es_buit
 false
@@ -1321,7 +1209,7 @@ I-102Bis
 1
 ##1
 #num_entrades
-3
+6
 ##3
 #es_buit
 false
@@ -1382,7 +1270,7 @@ I-103
 0
 ##0
 #num_entrades
-3
+6
 ##3
 #es_buit
 false
@@ -1402,7 +1290,7 @@ I-102
 1
 ##1
 #num_entrades
-3
+6
 ##3
 #es_buit
 false
@@ -1422,7 +1310,7 @@ I-102
 2
 ##2
 #num_entrades
-3
+6
 ##3
 #es_buit
 false
@@ -1483,7 +1371,7 @@ I-102
 1
 ##1
 #num_entrades
-3
+6
 ##3
 #es_buit
 false
@@ -1540,7 +1428,7 @@ I-101
 1
 ##1
 #num_entrades
-3
+6
 ##3
 #es_buit
 false
@@ -1596,7 +1484,7 @@ I-102
 1
 ##1
 #num_entrades
-3
+6
 ##3
 #es_buit
 false
@@ -1652,7 +1540,7 @@ true
 1
 ##1
 #num_entrades
-3
+6
 ##3
 #es_buit
 false
@@ -1703,7 +1591,7 @@ I-101
 0
 ##0
 #num_entrades
-1
+5
 ##2
 #es_buit
 false
@@ -1754,7 +1642,7 @@ true
 1
 ##1
 #num_entrades
-1
+5
 ##2
 #es_buit
 false
@@ -1810,105 +1698,2246 @@ I-102
 #as 101 "I-101"
 #as 102 "I-102"
 #as 103 "I-103"
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x124767: unsigned int const& std::max<unsigned int>(unsigned int const&, unsigned int const&) (stl_algobase.h:259)
-==1697==    by 0x12333C: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:152)
-==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
-==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
-==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x12336D: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:156)
-==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
-==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
-==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x1233FC: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:165)
-==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
-==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
-==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
 #as 104 "I-104"
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x124767: unsigned int const& std::max<unsigned int>(unsigned int const&, unsigned int const&) (stl_algobase.h:259)
-==1697==    by 0x12333C: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:152)
-==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
-==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
-==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
-==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x12336D: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:156)
-==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
-==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
-==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
-==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
-==1697== Conditional jump or move depends on uninitialised value(s)
-==1697==    at 0x1233FC: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:165)
-==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
-==1697==    by 0x1232F0: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:148)
-==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
-==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697== 
 #as 105 "I-105"
-==1697== Invalid read of size 8
-==1697==    at 0x122FD6: call_registry::rotacio_esquerra(call_registry::node*) (call_registry.cpp:89)
-==1697==    by 0x1233DB: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:160)
-==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
-==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697==  Address 0x28 is not stack'd, malloc'd or (recently) free'd
-==1697== 
-==1697== 
-==1697== Process terminating with default action of signal 11 (SIGSEGV)
-==1697==  Access not within mapped region at address 0x28
-==1697==    at 0x122FD6: call_registry::rotacio_esquerra(call_registry::node*) (call_registry.cpp:89)
-==1697==    by 0x1233DB: call_registry::insereix_numero(call_registry::node*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) (call_registry.cpp:160)
-==1697==    by 0x123AEE: call_registry::assigna_nom(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (call_registry.cpp:301)
-==1697==    by 0x1145C0: tracta_assigna_nom(gen_driver&) (driver_easydial.cpp:175)
-==1697==    by 0x48B1C17: gen_driver::process_operation(gen_driver::input_line*) (gen_driver.cpp:1084)
-==1697==    by 0x48AD18D: gen_driver::go() (gen_driver.cpp:830)
-==1697==    by 0x118637: main (driver_easydial.cpp:317)
-==1697==  If you believe this happened as a result of a stack
-==1697==  overflow in your program's main thread (unlikely but
-==1697==  possible), you can try to increase the size of the
-==1697==  main thread stack using the --main-stacksize= flag.
-==1697==  The main thread stack size used in this run was 8388608.
-==1697== 
-==1697== HEAP SUMMARY:
-==1697==     in use at exit: 110,576 bytes in 372 blocks
-==1697==   total heap usage: 1,252 allocs, 880 frees, 169,004 bytes allocated
-==1697== 
-==1697== LEAK SUMMARY:
-==1697==    definitely lost: 0 bytes in 0 blocks
-==1697==    indirectly lost: 0 bytes in 0 blocks
-==1697==      possibly lost: 0 bytes in 0 blocks
-==1697==    still reachable: 110,576 bytes in 372 blocks
-==1697==         suppressed: 0 bytes in 0 blocks
-==1697== Rerun with --leak-check=full to see details of leaked memory
-==1697== 
-==1697== Use --track-origins=yes to see where uninitialised values come from
-==1697== For lists of detected and suppressed errors, rerun with: -s
-==1697== ERROR SUMMARY: 112 errors from 19 contexts (suppressed: 0 from 0)
+#as 106 "I-106"
+#as 107 "I-107"
+#as 108 "I-108"
+#as 109 "I-109"
+#as 110 "I-110"
+#as 1111 "I-1111"
+#as 1112 "I-1112"
+#as 1113 "I-1113"
+#as 1114 "I-1114"
+#as 1115 "I-1115"
+#as 1116 "I-1116"
+#as 1118 "I-1118"
+#as 1119 "I-1119"
+#as 1120 "I-1120"
+#as 11121 "I-11121"
+#as 11122 "I-11122"
+#as 11123 "I-11123"
+#as 11124 "I-11124"
+#as 11125 "I-11125"
+#as 11126 "I-11126"
+#as 11127 "I-11127"
+#as 11128 "I-11128"
+#as 11129 "I-11129"
+#as 11130 "I-11130"
+#as 11131 "I-11131"
+#as 11132 "I-11132"
+#c 100
+false
+##false
+#c 111
+false
+##false
+#c 1110
+false
+##false
+#c 1117
+false
+##false
+#c 1121
+false
+##false
+#c 11120
+false
+##false
+#c 11133
+false
+##false
+#c 101
+false
+##true
+#c 11132
+true
+##true
+#c 1116
+false
+##true
+#nom_cr 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 111
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 1110
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 1117
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 1121
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 11120
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 11133
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 101
+Error::call_registry:21:Numero inexistent.
+##I-101
+#nom_cr 11132
+I-11132
+##I-11132
+#nom_cr 1116
+Error::call_registry:21:Numero inexistent.
+##I-1116
+#num_trucades 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 111
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 1110
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 1117
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 1121
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 11120
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 11133
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##0
+#num_trucades 11132
+0
+##0
+#num_trucades 1116
+Error::call_registry:21:Numero inexistent.
+##0
+#num_entrades
+69
+##31
+#es_buit
+false
+##false
+#dump
+11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 
+##101 I-101 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
+#r 101
+#r 11132
+#r 1116
+#num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11132
+1
+##1
+#num_trucades 1116
+1
+##1
+#num_entrades
+75
+##31
+#es_buit
+false
+##false
+#dump
+
+##102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101 1 11132 I-11132 1 1116 I-1116 1 
+#as 101 "I-101Bis"
+#as 11132 "I-11132Bis"
+#as 1116 "I-1116Bis"
+#nom_cr 101
+I-101Bis
+##I-101Bis
+#nom_cr 11132
+I-11132Bis
+##I-11132Bis
+#nom_cr 1116
+I-1116Bis
+##I-1116Bis
+#dump
+101 I-101Bis 0 11132 I-11132Bis 1 1116 I-1116Bis 1 
+##102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101Bis 1 11132 I-11132Bis 1 1116 I-1116Bis 1 
+#as 11132 "I-101Bis"
+#dump
+Error::call_registry:22:Nom repetit.
+##Error::call_registry:22:Nom repetit.
+#as 11132 "I-11132Bis"
+#as 101 "I-11132Bis"
+#dump
+Error::call_registry:22:Nom repetit.
+##Error::call_registry:22:Nom repetit.
+#destroy
+###!
+###!
+###!-----------------------------------------
+###5.2 assigna decreixent
+###!-----------------------------------------
+###!
+#init c52 call_registry
+#as 11132 "I-11132"
+#as 11131 "I-11131"
+#as 11130 "I-11130"
+#as 11129 "I-11129"
+#as 11128 "I-11128"
+#as 11127 "I-11127"
+#as 11126 "I-11126"
+#as 11125 "I-11125"
+#as 11124 "I-11124"
+#as 11123 "I-11123"
+#as 11122 "I-11122"
+#as 11121 "I-11121"
+#as 1120 "I-1120"
+#as 1119 "I-1119"
+#as 1118 "I-1118"
+#as 1116 "I-1116"
+#as 1115 "I-1115"
+#as 1114 "I-1114"
+#as 1113 "I-1113"
+#as 1112 "I-1112"
+#as 1111 "I-1111"
+#as 110 "I-110"
+#as 109 "I-109"
+#as 108 "I-108"
+#as 107 "I-107"
+#as 106 "I-106"
+#as 105 "I-105"
+#as 104 "I-104"
+#as 103 "I-103"
+#as 102 "I-102"
+#as 101 "I-101"
+#c 100
+false
+##false
+#c 111
+false
+##false
+#c 1110
+false
+##false
+#c 1117
+false
+##false
+#c 1121
+false
+##false
+#c 11120
+false
+##false
+#c 11133
+false
+##false
+#c 101
+true
+##true
+#c 11132
+false
+##true
+#c 1116
+false
+##true
+#nom_cr 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 111
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 1110
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 1117
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 1121
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 11120
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 11133
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 101
+I-101
+##I-101
+#nom_cr 11132
+Error::call_registry:21:Numero inexistent.
+##I-11132
+#nom_cr 1116
+Error::call_registry:21:Numero inexistent.
+##I-1116
+#num_trucades 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 111
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 1110
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 1117
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 1121
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 11120
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 11133
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 101
+0
+##0
+#num_trucades 11132
+Error::call_registry:21:Numero inexistent.
+##0
+#num_trucades 1116
+Error::call_registry:21:Numero inexistent.
+##0
+#num_entrades
+69
+##31
+#es_buit
+false
+##false
+#dump
+101 I-101 0 102 I-102 0 103 I-103 0 
+##101 I-101 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
+#r 101
+#r 11132
+#r 1116
+#num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11132
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1116
+1
+##1
+#dump
+
+##102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101 1 11132 I-11132 1 1116 I-1116 1 
+#as 101 "I-101Bis"
+#as 11132 "I-11132Bis"
+#as 1116 "I-1116Bis"
+#nom_cr 101
+I-101Bis
+##I-101Bis
+#nom_cr 11132
+I-11132Bis
+##I-11132Bis
+#nom_cr 1116
+I-1116Bis
+##I-1116Bis
+#dump
+101 I-101Bis 0 11132 I-11132Bis 0 1116 I-1116Bis 1 
+##102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101Bis 1 11132 I-11132Bis 1 1116 I-1116Bis 1 
+#destroy
+###!
+###!
+###!-----------------------------------------
+###5.3 registra creixent
+###!-----------------------------------------
+###!
+#init c53 call_registry
+#r 101
+#r 102
+#r 103
+#r 104
+#r 105
+#r 106
+#r 107
+#r 108
+#r 109
+#r 110
+#r 1111
+#r 1112
+#r 1113
+#r 1114
+#r 1115
+#r 1116
+#r 1118
+#r 1119
+#r 1120
+#r 11121
+#r 11122
+#r 11123
+#r 11124
+#r 11125
+#r 11126
+#r 11127
+#r 11128
+#r 11129
+#r 11130
+#r 11131
+#r 11132
+#c 100
+false
+##false
+#c 101
+false
+##true
+#c 102
+false
+##true
+#c 103
+false
+##true
+#c 104
+false
+##true
+#c 105
+false
+##true
+#c 106
+false
+##true
+#c 107
+false
+##true
+#c 108
+false
+##true
+#c 109
+false
+##true
+#c 110
+false
+##true
+#c 111
+false
+##false
+#c 1110
+false
+##false
+#c 1111
+false
+##true
+#c 1112
+false
+##true
+#c 1113
+false
+##true
+#c 1114
+false
+##true
+#c 1115
+false
+##true
+#c 1116
+false
+##true
+#c 1117
+false
+##false
+#c 1118
+false
+##true
+#c 1119
+false
+##true
+#c 1120
+false
+##true
+#c 1121
+false
+##false
+#c 11120
+false
+##false
+#c 11121
+false
+##true
+#c 11122
+false
+##true
+#c 11123
+false
+##true
+#c 11124
+false
+##true
+#c 11125
+false
+##true
+#c 11126
+false
+##true
+#c 11127
+false
+##true
+#c 11128
+false
+##true
+#c 11129
+false
+##true
+#c 11130
+true
+##true
+#c 11131
+true
+##true
+#c 11132
+true
+##true
+#c 11133
+false
+##false
+#nom_cr 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 101
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 102
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 103
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 104
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 105
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 106
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 107
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 108
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 109
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 110
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 111
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 1110
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 1111
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1112
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1113
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1114
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1115
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1116
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1117
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 1118
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1119
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1120
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1121
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 11120
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 11121
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11122
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11123
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11124
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11125
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11126
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11127
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11128
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11129
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11130
+
+##
+#nom_cr 11131
+
+##
+#nom_cr 11132
+
+##
+#nom_cr 11133
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 102
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 103
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 104
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 105
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 106
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 107
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 108
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 109
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 110
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 111
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 1110
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 1111
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1112
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1113
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1114
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1115
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1116
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1117
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 1118
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1119
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1120
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1121
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 11120
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 11121
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11122
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11123
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11124
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11125
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11126
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11127
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11128
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11129
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11130
+1
+##1
+#num_trucades 11131
+1
+##1
+#num_trucades 11132
+1
+##1
+#num_trucades 11133
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_entrades
+69
+##31
+#es_buit
+false
+##false
+#dump
+
+##
+#r 101
+#r 11132
+#r 1116
+#num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##2
+#num_trucades 11132
+1
+##2
+#num_trucades 1116
+1
+##2
+#num_entrades
+75
+##31
+#es_buit
+false
+##false
+#dump
+
+##
+#as 101 "I-101Bis"
+#as 11132 "I-11132Bis"
+#as 1116 "I-1116Bis"
+#nom_cr 101
+I-101Bis
+##I-101Bis
+#nom_cr 11132
+I-11132Bis
+##I-11132Bis
+#nom_cr 1116
+I-1116Bis
+##I-1116Bis
+#num_entrades
+78
+##31
+#dump
+101 I-101Bis 0 11132 I-11132Bis 1 1116 I-1116Bis 1 
+##101 I-101Bis 2 11132 I-11132Bis 2 1116 I-1116Bis 2 
+#as 11132 "I-101Bis"
+#dump
+Error::call_registry:22:Nom repetit.
+##Error::call_registry:22:Nom repetit.
+#as 11132 "I-11132Bis"
+#as 101 "I-11132Bis"
+#dump
+Error::call_registry:22:Nom repetit.
+##Error::call_registry:22:Nom repetit.
+#destroy
+###!
+###!
+###!-----------------------------------------
+###5.4 registra decreixent
+###!-----------------------------------------
+###!
+#init c54 call_registry
+#r 11132
+#r 11131
+#r 11130
+#r 11129
+#r 11128
+#r 11127
+#r 11126
+#r 11125
+#r 11124
+#r 11123
+#r 11122
+#r 11121
+#r 1120
+#r 1119
+#r 1118
+#r 1116
+#r 1115
+#r 1114
+#r 1113
+#r 1112
+#r 1111
+#r 110
+#r 109
+#r 108
+#r 107
+#r 106
+#r 105
+#r 104
+#r 103
+#r 102
+#r 101
+#c 100
+false
+##false
+#c 101
+true
+##true
+#c 102
+true
+##true
+#c 103
+true
+##true
+#c 104
+false
+##true
+#c 105
+false
+##true
+#c 106
+false
+##true
+#c 107
+false
+##true
+#c 108
+false
+##true
+#c 109
+false
+##true
+#c 110
+false
+##true
+#c 111
+false
+##false
+#c 1110
+false
+##false
+#c 1111
+false
+##true
+#c 1112
+false
+##true
+#c 1113
+false
+##true
+#c 1114
+false
+##true
+#c 1115
+false
+##true
+#c 1116
+false
+##true
+#c 1117
+false
+##false
+#c 1118
+false
+##true
+#c 1119
+false
+##true
+#c 1120
+false
+##true
+#c 1121
+false
+##false
+#c 11120
+false
+##false
+#c 11121
+false
+##true
+#c 11122
+false
+##true
+#c 11123
+false
+##true
+#c 11124
+false
+##true
+#c 11125
+false
+##true
+#c 11126
+false
+##true
+#c 11127
+false
+##true
+#c 11128
+false
+##true
+#c 11129
+false
+##true
+#c 11130
+false
+##true
+#c 11131
+false
+##true
+#c 11132
+false
+##true
+#c 11133
+false
+##false
+#nom_cr 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 101
+
+##
+#nom_cr 102
+
+##
+#nom_cr 103
+
+##
+#nom_cr 104
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 105
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 106
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 107
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 108
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 109
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 110
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 111
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 1110
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 1111
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1112
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1113
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1114
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1115
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1116
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1117
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 1118
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1119
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1120
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 1121
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 11120
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 11121
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11122
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11123
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11124
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11125
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11126
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11127
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11128
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11129
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11130
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11131
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11132
+Error::call_registry:21:Numero inexistent.
+##
+#nom_cr 11133
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 101
+1
+##1
+#num_trucades 102
+1
+##1
+#num_trucades 103
+1
+##1
+#num_trucades 104
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 105
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 106
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 107
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 108
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 109
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 110
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 111
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 1110
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 1111
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1112
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1113
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1114
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1115
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1116
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1117
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 1118
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1119
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1120
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 1121
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 11120
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 11121
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11122
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11123
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11124
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11125
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11126
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11127
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11128
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11129
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11130
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11131
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11132
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11133
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_entrades
+69
+##31
+#es_buit
+false
+##false
+#dump
+
+##
+#r 101
+#r 11132
+#r 1116
+#num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##2
+#num_trucades 11132
+Error::call_registry:21:Numero inexistent.
+##2
+#num_trucades 1116
+1
+##2
+#num_entrades
+73
+##31
+#es_buit
+false
+##false
+#dump
+
+##
+#as 101 "I-101Bis"
+#as 11132 "I-11132Bis"
+#as 1116 "I-1116Bis"
+#nom_cr 101
+I-101Bis
+##I-101Bis
+#nom_cr 11132
+I-11132Bis
+##I-11132Bis
+#nom_cr 1116
+I-1116Bis
+##I-1116Bis
+#num_entrades
+77
+##31
+#dump
+101 I-101Bis 0 11132 I-11132Bis 0 1116 I-1116Bis 1 
+##101 I-101Bis 2 11132 I-11132Bis 2 1116 I-1116Bis 2 
+#destroy
+###!
+###!
+###!-----------------------------------------
+###5.5 desordre
+###!-----------------------------------------
+###!
+#init c55 call_registry
+#as 11132 "I-11132"
+#as 11131 "I-11131"
+#as 11130 "I-11130"
+#as 103 "I-103"
+#as 101 "I-101"
+#as 102 "I-102"
+#as 1120 "I-1120"
+#as 1119 "I-1119"
+#as 110 "I-110"
+#as 11121 "I-11121"
+#as 11123 "I-11123"
+#as 11122 "I-11122"
+#as 108 "I-108"
+#as 1112 "I-1112"
+#as 11129 "I-11129"
+#as 11124 "I-11124"
+#as 11125 "I-11125"
+#as 1118 "I-1118"
+#as 1116 "I-1116"
+#as 1115 "I-1115"
+#as 109 "I-109"
+#as 107 "I-107"
+#as 1114 "I-1114"
+#as 104 "I-104"
+#as 105 "I-105"
+#as 106 "I-106"
+#as 1111 "I-1111"
+#as 1113 "I-1113"
+#as 11128 "I-11128"
+#as 11126 "I-11126"
+#as 11127 "I-11127"
+#c 100
+false
+##false
+#c 111
+false
+##false
+#c 1110
+false
+##false
+#c 1117
+false
+##false
+#c 1121
+false
+##false
+#c 11120
+false
+##false
+#c 11133
+false
+##false
+#c 101
+false
+##true
+#c 11132
+false
+##true
+#c 1116
+false
+##true
+#nom_cr 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 111
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 1110
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 1117
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 1121
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 11120
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 11133
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 101
+Error::call_registry:21:Numero inexistent.
+##I-101
+#nom_cr 11132
+Error::call_registry:21:Numero inexistent.
+##I-11132
+#nom_cr 1116
+Error::call_registry:21:Numero inexistent.
+##I-1116
+#num_trucades 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 111
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 1110
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 1117
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 1121
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 11120
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 11133
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##0
+#num_trucades 11132
+Error::call_registry:21:Numero inexistent.
+##0
+#num_trucades 1116
+Error::call_registry:21:Numero inexistent.
+##0
+#num_entrades
+68
+##31
+#es_buit
+false
+##false
+#dump
+11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 
+##101 I-101 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
+#r 101
+#r 11132
+#r 1116
+#num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##1
+#num_trucades 11132
+1
+##1
+#num_trucades 1116
+1
+##1
+#dump
+
+##102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101 1 11132 I-11132 1 1116 I-1116 1 
+#as 101 "I-101Bis"
+#as 11132 "I-11132Bis"
+#as 1116 "I-1116Bis"
+#nom_cr 101
+I-101Bis
+##I-101Bis
+#nom_cr 11132
+I-11132Bis
+##I-11132Bis
+#nom_cr 1116
+I-1116Bis
+##I-1116Bis
+#dump
+101 I-101Bis 0 11132 I-11132Bis 1 1116 I-1116Bis 1 
+##102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101Bis 1 11132 I-11132Bis 1 1116 I-1116Bis 1 
+#as 11132 "I-101Bis"
+#dump
+Error::call_registry:22:Nom repetit.
+##Error::call_registry:22:Nom repetit.
+#as 11132 "I-11132Bis"
+#as 101 "I-11132Bis"
+#dump
+Error::call_registry:22:Nom repetit.
+##Error::call_registry:22:Nom repetit.
+#destroy
+###!
+###!
+###!-----------------------------------------
+###5.6 elimina assignacions
+###!-----------------------------------------
+###!
+#init c56 call_registry
+#as 101 "I-101"
+#as 102 "I-102"
+#as 103 "I-103"
+#as 104 "I-104"
+#as 105 "I-105"
+#as 106 "I-106"
+#as 107 "I-107"
+#as 108 "I-108"
+#as 109 "I-109"
+#as 110 "I-110"
+#as 1111 "I-1111"
+#as 1112 "I-1112"
+#as 1113 "I-1113"
+#as 1114 "I-1114"
+#as 1115 "I-1115"
+#as 1116 "I-1116"
+#as 1118 "I-1118"
+#as 1119 "I-1119"
+#as 1120 "I-1120"
+#as 11121 "I-11121"
+#as 11122 "I-11122"
+#as 11123 "I-11123"
+#as 11124 "I-11124"
+#as 11125 "I-11125"
+#as 11126 "I-11126"
+#as 11127 "I-11127"
+#as 11128 "I-11128"
+#as 11129 "I-11129"
+#as 11130 "I-11130"
+#as 11131 "I-11131"
+#as 11132 "I-11132"
+#dump
+11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 
+##101 I-101 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
+#e 101
+Error::call_registry:21:Numero inexistent.
+#num_entrades
+69
+##30
+#es_buit
+false
+##false
+#dump
+11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 
+##102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
+#as 101 "I-101Bis"
+#num_entrades
+72
+##31
+#dump
+
+##101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
+#e 11132
+Error::call_registry:21:Numero inexistent.
+#num_entrades
+72
+##30
+#es_buit
+true
+##false
+#dump
+
+##101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
+#as 11132 "I-11132Bis"
+#num_entrades
+73
+##31
+#dump
+11132 I-11132Bis 0 
+##101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132Bis 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
+#e 1116
+Error::call_registry:21:Numero inexistent.
+#num_entrades
+73
+##30
+#es_buit
+false
+##false
+#dump
+11132 I-11132Bis 0 
+##101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132Bis 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
+#as 1116 "I-1116Bis"
+#num_entrades
+75
+##31
+#dump
+11132 I-11132Bis 0 1116 I-1116Bis 0 
+##101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132Bis 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116Bis 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
+#e 11128
+Error::call_registry:21:Numero inexistent.
+#e 11128
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#num_entrades
+75
+##30
+#es_buit
+false
+##false
+#dump
+11132 I-11132Bis 0 1116 I-1116Bis 0 
+##101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132Bis 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116Bis 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
+#as 11128 "I-11128Bis"
+#num_entrades
+78
+##31
+#dump
+11128 I-11128Bis 0 11132 I-11132Bis 0 1116 I-1116Bis 0 
+##101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128Bis 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132Bis 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116Bis 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
+#e 1118
+Error::call_registry:21:Numero inexistent.
+#e 1119
+Error::call_registry:21:Numero inexistent.
+#e 1120
+Error::call_registry:21:Numero inexistent.
+#e 11121
+Error::call_registry:21:Numero inexistent.
+#e 11122 
+Error::call_registry:21:Numero inexistent.
+#e 11123
+Error::call_registry:21:Numero inexistent.
+#e 11124
+Error::call_registry:21:Numero inexistent.
+#e 11125
+Error::call_registry:21:Numero inexistent.
+#e 11126
+Error::call_registry:21:Numero inexistent.
+#e 11127
+Error::call_registry:21:Numero inexistent.
+#e 11128
+#e 11129
+Error::call_registry:21:Numero inexistent.
+#e 11130
+Error::call_registry:21:Numero inexistent.
+#e 11131
+Error::call_registry:21:Numero inexistent.
+#e 11132
+#e 1115
+Error::call_registry:21:Numero inexistent.
+#e 1114
+Error::call_registry:21:Numero inexistent.
+#e 1113
+Error::call_registry:21:Numero inexistent.
+#e 1112
+Error::call_registry:21:Numero inexistent.
+#e 1111
+Error::call_registry:21:Numero inexistent.
+#e 110
+Error::call_registry:21:Numero inexistent.
+#e 109
+Error::call_registry:21:Numero inexistent.
+#e 108
+Error::call_registry:21:Numero inexistent.
+#e 107
+Error::call_registry:21:Numero inexistent.
+#e 106
+Error::call_registry:21:Numero inexistent.
+#e 105
+Error::call_registry:21:Numero inexistent.
+#e 104
+Error::call_registry:21:Numero inexistent.
+#e 103
+Error::call_registry:21:Numero inexistent.
+#e 102
+Error::call_registry:21:Numero inexistent.
+#e 101
+Error::call_registry:21:Numero inexistent.
+#e 1116
+#num_entrades
+75
+##0
+#dump
+
+##
+#destroy
+###!
+###!
+###!-----------------------------------------
+###5.7 elimina registres
+###!-----------------------------------------
+###!
+#init c57 call_registry
+#r 11132
+#r 11131
+#r 11130
+#r 11129
+#r 11128
+#r 11127
+#r 11126
+#r 11125
+#r 11124
+#r 11123
+#r 11122
+#r 11121
+#r 1120
+#r 1119
+#r 1118
+#r 1116
+#r 1115
+#r 1114
+#r 1113
+#r 1112
+#r 1111
+#r 110
+#r 109
+#r 108
+#r 107
+#r 106
+#r 105
+#r 104
+#r 103
+#r 102
+#r 101
+#dump
+
+##
+#e 101
+#num_entrades
+68
+##30
+#c 101 
+false
+##false
+#num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#es_buit
+false
+##false
+#as 101 "I-101Bis"
+#num_entrades
+70
+##31
+#dump
+
+##101 I-101Bis 0 
+#e 11132
+Error::call_registry:21:Numero inexistent.
+#num_entrades
+70
+##30
+#c 11132
+false
+##false
+#num_trucades 11132
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 11132
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#dump
+
+##101 I-101Bis 0 
+#as 11132 "I-11132Bis"
+#num_entrades
+71
+##31
+#dump
+11132 I-11132Bis 0 
+##101 I-101Bis 0 11132 I-11132Bis 0 
+#e 1116
+Error::call_registry:21:Numero inexistent.
+#num_entrades
+71
+##30
+#c 1116
+false
+##false
+#num_trucades 1116
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 1116
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#dump
+11132 I-11132Bis 0 
+##101 I-101Bis 0 11132 I-11132Bis 0 
+#as 1116 "I-1116Bis"
+#num_entrades
+73
+##31
+#dump
+11132 I-11132Bis 0 1116 I-1116Bis 0 
+##101 I-101Bis 0 11132 I-11132Bis 0 1116 I-1116Bis 0 
+#e 11128
+Error::call_registry:21:Numero inexistent.
+#num_entrades
+73
+##30
+#c 11128
+false
+##false
+#num_trucades 11128
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#nom_cr 11128
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#dump
+11132 I-11132Bis 0 1116 I-1116Bis 0 
+##101 I-101Bis 0 11132 I-11132Bis 0 1116 I-1116Bis 0 
+#as 11128 "I-11128Bis"
+#dump
+11128 I-11128Bis 0 11132 I-11132Bis 0 1116 I-1116Bis 0 
+##101 I-101Bis 0 11128 I-11128Bis 0 11132 I-11132Bis 0 1116 I-1116Bis 0 
+#num_entrades
+76
+##31
+#e 1118
+Error::call_registry:21:Numero inexistent.
+#e 1119
+Error::call_registry:21:Numero inexistent.
+#e 1120
+Error::call_registry:21:Numero inexistent.
+#e 11121
+Error::call_registry:21:Numero inexistent.
+#e 11122 
+Error::call_registry:21:Numero inexistent.
+#e 11123
+Error::call_registry:21:Numero inexistent.
+#e 11124
+Error::call_registry:21:Numero inexistent.
+#e 11125
+Error::call_registry:21:Numero inexistent.
+#e 11126
+Error::call_registry:21:Numero inexistent.
+#e 11127
+Error::call_registry:21:Numero inexistent.
+#e 11128
+#e 11129
+Error::call_registry:21:Numero inexistent.
+#e 11130
+Error::call_registry:21:Numero inexistent.
+#e 11131
+Error::call_registry:21:Numero inexistent.
+#e 11132
+#e 1115
+Error::call_registry:21:Numero inexistent.
+#e 1114
+Error::call_registry:21:Numero inexistent.
+#e 1113
+Error::call_registry:21:Numero inexistent.
+#e 1112
+Error::call_registry:21:Numero inexistent.
+#e 1111
+Error::call_registry:21:Numero inexistent.
+#e 110
+Error::call_registry:21:Numero inexistent.
+#e 109
+Error::call_registry:21:Numero inexistent.
+#e 108
+Error::call_registry:21:Numero inexistent.
+#e 107
+Error::call_registry:21:Numero inexistent.
+#e 106
+Error::call_registry:21:Numero inexistent.
+#e 105
+Error::call_registry:21:Numero inexistent.
+#e 104
+Error::call_registry:21:Numero inexistent.
+#e 103
+Error::call_registry:21:Numero inexistent.
+#e 102
+Error::call_registry:21:Numero inexistent.
+#e 101
+Error::call_registry:21:Numero inexistent.
+#e 1116
+#num_entrades
+73
+##0
+#dump
+
+##
+#destroy
+###!
+###!
+###!
+###!-----------------------------------------
+###6 Call_Registry: construccio per copia
+###!-----------------------------------------
+###!
+###!-----------------------------------------
+###6.1 buit
+###!-----------------------------------------
+###!
+#init c61 call_registry
+###!
+#initcopy c61Bis = c61
+#c61 destroy 
+###!
+#c61Bis es_buit
+true
+##true
+#c61Bis num_entrades
+0
+##0
+#c61Bis c 101
+false
+##false
+#c61Bis num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c61Bis nom_cr 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c61Bis e 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c61Bis dump
+
+##
+#c61Bis destroy
+###!
+###!
+###!-----------------------------------------
+###6.2 Una entrada
+###!-----------------------------------------
+###!
+#init c62 call_registry
+#c62 as 102 "I-102"
+###!
+#initcopy c62Bis = c62
+#c62 destroy
+###!
+#c62Bis es_buit
+false
+##false
+#c62Bis num_entrades
+1
+##1
+#c62Bis c 101
+false
+##false
+#c62Bis num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c62Bis nom_cr 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c62Bis e 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c62Bis c 102
+true
+##true
+#c62Bis num_trucades 102
+0
+##0
+#c62Bis nom_cr 102
+I-102
+##I-102
+#c62Bis c 103
+false
+##false
+#c62Bis num_trucades 103
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c62Bis nom_cr 103
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c62Bis e 103
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c62Bis dump
+102 I-102 0 
+##102 I-102 0 
+#c62Bis destroy
+###!
+###!
+###!-----------------------------------------
+###6.3 31 entrades
+###!-----------------------------------------
+###!
+#init c63 call_registry
+#c63 as 11132 "I-11132"
+#c63 as 11131 "I-11131"
+#c63 as 11130 "I-11130"
+#c63 as 103 "I-103"
+#c63 as 101 "I-101"
+#c63 as 102 "I-102"
+#c63 as 1120 "I-1120"
+#c63 as 1119 "I-1119"
+#c63 as 110 "I-110"
+#c63 as 11121 "I-11121"
+#c63 as 11123 "I-11123"
+#c63 as 11122 "I-11122"
+#c63 as 108 "I-108"
+#c63 as 1112 "I-1112"
+#c63 as 11129 "I-11129"
+#c63 as 11124 "I-11124"
+#c63 as 11125 "I-11125"
+#c63 as 1118 "I-1118"
+#c63 as 1116 "I-1116"
+#c63 as 1115 "I-1115"
+#c63 as 109 "I-109"
+#c63 as 107 "I-107"
+#c63 as 1114 "I-1114"
+#c63 as 104 "I-104"
+#c63 as 105 "I-105"
+#c63 as 106 "I-106"
+#c63 as 1111 "I-1111"
+#c63 as 1113 "I-1113"
+#c63 as 11128 "I-11128"
+#c63 as 11126 "I-11126"
+#c63 as 11127 "I-11127"
+###!
+#initcopy c63Bis = c63
+#c63 destroy
+###!
+#c63Bis c 100
+false
+##false
+#c63Bis c 111
+false
+##false
+#c63Bis c 1110
+false
+##false
+#c63Bis c 1117
+false
+##false
+#c63Bis c 1121
+false
+##false
+#c63Bis c 11120
+false
+##false
+#c63Bis c 11133
+false
+##false
+#c63Bis c 101
+false
+##true
+#c63Bis c 11132
+false
+##true
+#c63Bis c 1116
+false
+##true
+#c63Bis nom_cr 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c63Bis nom_cr 111
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c63Bis nom_cr 1110
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c63Bis nom_cr 1117
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c63Bis nom_cr 1121
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c63Bis nom_cr 11120
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c63Bis nom_cr 11133
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c63Bis nom_cr 101
+Error::call_registry:21:Numero inexistent.
+##I-101
+#c63Bis nom_cr 11132
+Error::call_registry:21:Numero inexistent.
+##I-11132
+#c63Bis nom_cr 1116
+Error::call_registry:21:Numero inexistent.
+##I-1116
+#c63Bis num_trucades 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c63Bis num_trucades 111
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c63Bis num_trucades 1110
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c63Bis num_trucades 1117
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c63Bis num_trucades 1121
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c63Bis num_trucades 11120
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c63Bis num_trucades 11133
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c63Bis num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##0
+#c63Bis num_trucades 11132
+Error::call_registry:21:Numero inexistent.
+##0
+#c63Bis num_trucades 1116
+Error::call_registry:21:Numero inexistent.
+##0
+#c63Bis num_entrades
+68
+##31
+#c63Bis es_buit
+false
+##false
+#c63Bis dump
+11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 
+##101 I-101 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
+#c63Bis destroy
+###!
+###!
+###!
+###!-----------------------------------------
+###7 Call_Registry: assignacio
+###!-----------------------------------------
+###!
+###!-----------------------------------------
+###7.1 buit
+###!-----------------------------------------
+###!
+#init c71 call_registry
+###!
+#init c71Bis call_registry
+#c71Bis = c71
+#c71 destroy
+###!
+#c71Bis es_buit
+true
+##true
+#c71Bis num_entrades
+0
+##0
+#c71Bis c 101
+false
+##false
+#c71Bis num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c71Bis nom_cr 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c71Bis e 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c71Bis dump
+
+##
+#c71Bis destroy
+###!
+###!
+###!-----------------------------------------
+###7.2 Una entrada
+###!-----------------------------------------
+###!
+#init c72 call_registry
+#c72 as 102 "I-102"
+###!
+#init c72Bis call_registry
+#c72Bis = c72
+#c72 destroy
+###!
+#c72Bis es_buit
+false
+##false
+#c72Bis num_entrades
+1
+##1
+#c72Bis c 101
+false
+##false
+#c72Bis num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c72Bis nom_cr 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c72Bis e 101
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c72Bis c 102
+true
+##true
+#c72Bis num_trucades 102
+0
+##0
+#c72Bis nom_cr 102
+I-102
+##I-102
+#c72Bis c 103
+false
+##false
+#c72Bis num_trucades 103
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c72Bis nom_cr 103
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c72Bis e 103
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c72Bis dump
+102 I-102 0 
+##102 I-102 0 
+#c72Bis destroy
+###!
+###!
+###!-----------------------------------------
+###7.3 31 entrades
+###!-----------------------------------------
+###!
+#init c73 call_registry
+#c73 as 11132 "I-11132"
+#c73 r 11131
+#c73 as 11130 "I-11130"
+#c73 r 103
+#c73 as 101 "I-101"
+#c73 r 102
+#c73 as 1120 "I-1120"
+#c73 r 1119
+#c73 as 110 "I-110"
+#c73 r 11121
+#c73 as 11123 "I-11123"
+#c73 r 11122
+#c73 as 108 "I-108"
+#c73 r 1112
+#c73 as 11129 "I-11129"
+#c73 r 11124
+#c73 as 11125 "I-11125"
+#c73 r 1118
+#c73 as 1116 "I-1116"
+#c73 r 1115
+#c73 as 109 "I-109"
+#c73 r 107
+#c73 as 1114 "I-1114"
+#c73 r 104
+#c73 r 105
+#c73 as 106 "I-106"
+#c73 r 1111
+#c73 as 1113 "I-1113"
+#c73 r 11128
+#c73 as 11126 "I-11126"
+#c73 r 11127
+###!
+#initcopy c73Bis = c73
+#c73 destroy
+###!
+#c73Bis c 100
+false
+##false
+#c73Bis c 111
+false
+##false
+#c73Bis c 1110
+false
+##false
+#c73Bis c 1117
+false
+##false
+#c73Bis c 1121
+false
+##false
+#c73Bis c 11120
+false
+##false
+#c73Bis c 11133
+false
+##false
+#c73Bis c 101
+false
+##true
+#c73Bis c 11132
+false
+##true
+#c73Bis c 1116
+false
+##true
+#c73Bis nom_cr 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c73Bis nom_cr 111
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c73Bis nom_cr 1110
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c73Bis nom_cr 1117
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c73Bis nom_cr 1121
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c73Bis nom_cr 11120
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c73Bis nom_cr 11133
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c73Bis nom_cr 101
+Error::call_registry:21:Numero inexistent.
+##I-101
+#c73Bis nom_cr 11131
+Error::call_registry:21:Numero inexistent.
+##
+#c73Bis nom_cr 1116
+Error::call_registry:21:Numero inexistent.
+##I-1116
+#c73Bis num_trucades 100
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c73Bis num_trucades 111
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c73Bis num_trucades 1110
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c73Bis num_trucades 1117
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c73Bis num_trucades 1121
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c73Bis num_trucades 11120
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c73Bis num_trucades 11133
+Error::call_registry:21:Numero inexistent.
+##Error::call_registry:21:Numero inexistent.
+#c73Bis num_trucades 101
+Error::call_registry:21:Numero inexistent.
+##0
+#c73Bis num_trucades 11131
+Error::call_registry:21:Numero inexistent.
+##1
+#c73Bis num_trucades 1116
+Error::call_registry:21:Numero inexistent.
+##0
+#c73Bis num_entrades
+68
+##31
+#c73Bis es_buit
+false
+##false
+#c73Bis dump
+11126 I-11126 0 
+##101 I-101 0 106 I-106 0 108 I-108 0 109 I-109 0 110 I-110 0 11123 I-11123 0 11125 I-11125 0 11126 I-11126 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11132 I-11132 0 1114 I-1114 0 1116 I-1116 0 1120 I-1120 0 
+#c73Bis destroy
+###!
+###!

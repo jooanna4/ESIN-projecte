@@ -57,6 +57,7 @@ call_registry::node* call_registry::copia_arbre(node *n) {
         aux = new node;
         try {
             aux->_ph = n->_ph;
+            aux->_altura = n->_altura;
             aux->_esq = copia_arbre(n->_esq);
             aux->_dret = copia_arbre(n->_dret);
         } catch (...) {
@@ -86,7 +87,7 @@ call_registry::node* call_registry::rotacio_esquerra(node *n) {
     if (n != nullptr) {
         node *nova_n = n->_dret;
         node *aux(nullptr);
-        if (nova_n->_esq != nullptr)
+        if (nova_n != nullptr)
             aux = nova_n->_esq;
 
         // Intercanvi de nodes
@@ -111,7 +112,7 @@ call_registry::node* call_registry::rotacio_dreta(node *n) {
     if (n != nullptr) {
         node *nova_n = n->_esq;
         node *aux (nullptr);
-        if (nova_n->_dret != nullptr)
+        if (nova_n != nullptr)
             aux = nova_n->_dret;
 
         // Intercanvi de nodes
@@ -133,10 +134,12 @@ call_registry::node* call_registry::insereix_numero(node *n, nat num, const stri
 // Pre: el número num no existeix en l'arbre AVL amb arrel n
 // Post: retorna l'arrel de l'arbre AVL actualitzat amb la inserció del
 //       número num mantenint totes les propietats de l'arbre AVL
+    _mida++;
     if (n == nullptr) {
         node *aux = new node;
         phone ph(num, name, compt);
         aux->_ph = ph;
+        aux->_altura = 1;
         aux->_esq = nullptr;
         aux->_dret = nullptr;
         return aux;
@@ -148,7 +151,6 @@ call_registry::node* call_registry::insereix_numero(node *n, nat num, const stri
             n->_dret = insereix_numero(n->_dret, num, name, compt);
     
         n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
-        _mida++;
         nat fact = factor_equilibri(n);
     
         if (fact > 1 && n->_esq != nullptr) {
@@ -187,10 +189,11 @@ call_registry::node* call_registry::elimina_numero(node *n, nat num) {
         else {
             n = ajunta (n->_esq, n->_dret);
             delete (aux);
+            _mida--;
+            return n;
         }
 
         n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
-        _mida--;
         nat fact = factor_equilibri(n);
 
         if (fact > 1 && n->_esq != nullptr) {
