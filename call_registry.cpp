@@ -138,8 +138,14 @@ call_registry::node* call_registry::insereix_numero(node *n, nat num, const stri
 // Pre: el número num no existeix en l'arbre AVL amb arrel n
 // Post: retorna l'arrel de l'arbre AVL actualitzat amb la inserció del
 //       número num mantenint totes les propietats de l'arbre AVL
+<<<<<<< HEAD
     // cout << "Entra a insereix" << endl;
+=======
+   cout << "numero: " << num << " entra a insereix" << endl; 
+    _mida++;
+>>>>>>> 8b5720bcc32a6baa829fdfebe5432220d27ef54d
     if (n == nullptr) {
+        cout << "insereix el node" << endl;
         node *aux = new node;
         phone ph(num, name, compt);
         aux->_ph = ph;
@@ -151,8 +157,13 @@ call_registry::node* call_registry::insereix_numero(node *n, nat num, const stri
         return aux;
     }
     else {
+<<<<<<< HEAD
         if (num < n->_ph.numero()) {
             // cout << "Insereix esquerra" << endl;
+=======
+        
+        if (num < n->_ph.numero())
+>>>>>>> 8b5720bcc32a6baa829fdfebe5432220d27ef54d
             n->_esq = insereix_numero(n->_esq, num, name, compt);
         }
         else {
@@ -161,9 +172,17 @@ call_registry::node* call_registry::insereix_numero(node *n, nat num, const stri
         }
     
         n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
+<<<<<<< HEAD
         // cout << "Altura: " << n->_altura << endl;
         int fact = factor_equilibri(n);
     
+=======
+        cout << "altura: " << n->_altura << endl; 
+        nat fact = factor_equilibri(n);
+        cout << "factor: " << fact << endl; 
+
+
+>>>>>>> 8b5720bcc32a6baa829fdfebe5432220d27ef54d
         if (fact > 1 && n->_esq != nullptr) {
             if (num < n->_esq->_ph.numero()) {
                 // cout << "Rotació dreta" << endl;

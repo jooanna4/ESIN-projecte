@@ -41,6 +41,8 @@ true
 ###!-----------------------------------------
 #init c21 call_registry
 #as 102 "I-102"
+numero: 102 entra a insereix
+insereix el node
 ###!
 #c 101
 false
@@ -100,6 +102,8 @@ true
 ###!
 #init c22 call_registry
 #as 102 "I-102"
+numero: 102 entra a insereix
+insereix el node
 #r 102
 ###!
 #c 102
@@ -163,6 +167,8 @@ true
 ###!
 #init c23 call_registry
 #r 102
+numero: 102 entra a insereix
+insereix el node
 ###!
 #c 101
 false
@@ -222,6 +228,8 @@ true
 ###!
 #init c24 call_registry
 #r 102
+numero: 102 entra a insereix
+insereix el node
 #as 102 "I-102"
 ###!
 #c 102
@@ -290,7 +298,14 @@ true
 ###!
 #init c31 call_registry
 #as 101 "I-101"
+numero: 101 entra a insereix
+insereix el node
 #as 103 "I-103"
+numero: 103 entra a insereix
+numero: 103 entra a insereix
+insereix el node
+altura: 2
+factor: 4294967295
 #c 100
 false
 ##false
@@ -434,7 +449,17 @@ false
 ###!
 #init c32 call_registry
 #as 101 "I-101"
+numero: 101 entra a insereix
+insereix el node
 #r 103
+numero: 103 entra a insereix
+numero: 103 entra a insereix
+numero: 103 entra a insereix
+insereix el node
+altura: 2
+factor: 2
+altura: 5
+factor: 4294967292
 #c 100
 false
 ##false
@@ -448,6 +473,7 @@ false
 true
 ##true
 #c 104
+<<<<<<< HEAD
 false
 ##false
 #nom_cr 100
@@ -3912,3 +3938,5 @@ false
 #c73Bis destroy
 ###!
 ###!
+=======
+>>>>>>> 8b5720bcc32a6baa829fdfebe5432220d27ef54d
