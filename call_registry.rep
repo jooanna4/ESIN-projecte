@@ -13,7 +13,7 @@ nat _mida;              // Número de telefons que hi ha en l'arbre AVL
 
 // Metodes privats
 static nat altura(node *n);
-static nat factor_equilibri(node *n);
+static int factor_equilibri(node *n);
 static node* busca(node *n, nat num);        // Busca el telefon num dintre del AVL amb arrel n
 static void rec_inordre(node *n, vector<phone>& V);
 

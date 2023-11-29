@@ -7,19 +7,23 @@ nat call_registry::altura(node *n) {
     nat aux;
     if (n == nullptr)
         aux = 0;
-    else
+    else {
+        // cout << "Altura: " << n->_altura << endl;
         aux = n->_altura;
+    }
     return aux;
 }
 
-nat call_registry::factor_equilibri(node *n) {
+int call_registry::factor_equilibri(node *n) {
 // Pre: Cert
 // Post: retorna el factor d'equilibri de l'arbre AVL amb arrel n
-    nat aux;
+    int aux;
     if (n == nullptr)
         aux = 0;
-    else
+    else {
         aux = altura(n->_esq) - altura(n->_dret);
+    }
+    // cout << "Factor equilibri: " << aux << endl;
     return aux;
 }
 
@@ -134,7 +138,7 @@ call_registry::node* call_registry::insereix_numero(node *n, nat num, const stri
 // Pre: el número num no existeix en l'arbre AVL amb arrel n
 // Post: retorna l'arrel de l'arbre AVL actualitzat amb la inserció del
 //       número num mantenint totes les propietats de l'arbre AVL
-    _mida++;
+    // cout << "Entra a insereix" << endl;
     if (n == nullptr) {
         node *aux = new node;
         phone ph(num, name, compt);
@@ -142,30 +146,43 @@ call_registry::node* call_registry::insereix_numero(node *n, nat num, const stri
         aux->_altura = 1;
         aux->_esq = nullptr;
         aux->_dret = nullptr;
+        _mida++;
+        // cout << "Insereix node, " << num <<" amb mida: " << _mida << endl;
         return aux;
     }
     else {
-        if (num < n->_ph.numero())
+        if (num < n->_ph.numero()) {
+            // cout << "Insereix esquerra" << endl;
             n->_esq = insereix_numero(n->_esq, num, name, compt);
-        else
+        }
+        else {
+            // cout << "Insereix dreta" << endl;
             n->_dret = insereix_numero(n->_dret, num, name, compt);
+        }
     
         n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
-        nat fact = factor_equilibri(n);
+        // cout << "Altura: " << n->_altura << endl;
+        int fact = factor_equilibri(n);
     
         if (fact > 1 && n->_esq != nullptr) {
-            if (num < n->_esq->_ph.numero())
+            if (num < n->_esq->_ph.numero()) {
+                // cout << "Rotació dreta" << endl;
                 return rotacio_dreta(n);
+            }
             else if (num > n->_esq->_ph.numero()) {
+                // cout << "Rotació esquerra" << endl;
                 n->_esq = rotacio_esquerra(n->_esq);
                 return rotacio_dreta(n);
             }
         }
         
         else if (fact < -1 && n->_dret != nullptr) {
-            if (num > n->_dret->_ph.numero())
+            if (num > n->_dret->_ph.numero()) {
+                // cout << "Rotació esquerra" << endl;
                 return rotacio_esquerra(n);
+            }
             else if (num < n->_dret->_ph.numero()) {
+                // cout << "Rotació dreta" << endl;
                 n->_dret = rotacio_dreta(n->_dret);
                 return rotacio_esquerra(n);
             }
@@ -194,7 +211,7 @@ call_registry::node* call_registry::elimina_numero(node *n, nat num) {
         }
 
         n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
-        nat fact = factor_equilibri(n);
+        int fact = factor_equilibri(n);
 
         if (fact > 1 && n->_esq != nullptr) {
             if (num < n->_esq->_ph.numero())
@@ -232,6 +249,7 @@ call_registry::node* call_registry::ajunta(node* n1, node* n2) {
     else {
         node *aux = elimina_maxim(n1);
         aux->_dret = n2;
+        aux->_altura = n1->_altura - 1;
         n = aux;
     }
     return n;
@@ -248,6 +266,7 @@ call_registry::node* call_registry::elimina_maxim(node *n) {
     }
     if (pare != nullptr) {
         pare->_dret = n->_esq;
+        if (n->_esq != nullptr) n->_esq->_altura = n->_altura;
         n->_esq = n_orig;
     }
     return n;
@@ -282,12 +301,17 @@ void call_registry::registra_trucada(nat num) throw(error) {
 // Post: Si el número num existeix, s'incrementa el seu comptador de trucades. 
 //       Si el número num no estava prèviament, afegeix una nova entrada
 //       amb el número de telèfon donat, un nom buit i el comptador a 1.
+    // // cout << "mida inicial: " << _mida << endl;
     if (conte(num)) {
+        // // cout << "conte el numero" << endl;
         node *aux = busca(_arrel, num);
         aux->_ph++;
     }
     else
         _arrel = insereix_numero(_arrel, num, "", 1);
+    // cout << "Arrel: ";
+    // if (_arrel == nullptr) // cout << "null" << endl;
+    // else // cout << "no null, amb mida: " << _mida << endl;
 }
 
 void call_registry::assigna_nom(nat num, const string& name) throw(error) {

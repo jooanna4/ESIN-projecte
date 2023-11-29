@@ -337,7 +337,7 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_entrades
-3
+2
 ##2
 #es_buit
 false
@@ -357,7 +357,7 @@ I-101
 1
 ##1
 #num_entrades
-3
+2
 ##2
 #es_buit
 false
@@ -377,7 +377,7 @@ I-103
 1
 ##1
 #num_entrades
-3
+2
 ##2
 #es_buit
 false
@@ -397,7 +397,7 @@ I-101Bis
 1
 ##1
 #num_entrades
-3
+2
 ##2
 #es_buit
 false
@@ -417,7 +417,7 @@ I-103Bis
 1
 ##1
 #num_entrades
-3
+2
 ##2
 #es_buit
 false
@@ -481,7 +481,7 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_entrades
-3
+2
 ##2
 #es_buit
 false
@@ -501,7 +501,7 @@ true
 2
 ##2
 #num_entrades
-3
+2
 ##2
 #es_buit
 false
@@ -521,7 +521,7 @@ I-103
 2
 ##2
 #num_entrades
-3
+2
 ##2
 #es_buit
 false
@@ -585,7 +585,7 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_entrades
-3
+2
 ##2
 #es_buit
 false
@@ -604,7 +604,7 @@ true
 2
 ##2
 #num_entrades
-3
+2
 ##2
 #es_buit
 false
@@ -623,7 +623,7 @@ true
 2
 ##2
 #num_entrades
-3
+2
 ##2
 #es_buit
 false
@@ -692,7 +692,7 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_entrades
-3
+2
 ##2
 #es_buit
 false
@@ -712,7 +712,7 @@ I-103
 1
 ##1
 #num_entrades
-3
+2
 ##2
 #es_buit
 false
@@ -733,7 +733,7 @@ I-103
 2
 ##2
 #num_entrades
-3
+2
 ##2
 #es_buit
 false
@@ -777,7 +777,7 @@ I-103
 0
 ##0
 #num_entrades
-2
+1
 ##1
 #es_buit
 false
@@ -821,7 +821,7 @@ true
 1
 ##1
 #num_entrades
-2
+1
 ##1
 #es_buit
 false
@@ -866,7 +866,7 @@ true
 1
 ##1
 #num_entrades
-4
+2
 ##2
 #es_buit
 false
@@ -913,7 +913,7 @@ true
 1
 ##1
 #num_entrades
-4
+2
 ##2
 #es_buit
 false
@@ -975,7 +975,7 @@ I-103
 0
 ##0
 #num_entrades
-6
+3
 ##3
 #es_buit
 false
@@ -995,7 +995,7 @@ I-102
 1
 ##1
 #num_entrades
-6
+3
 ##3
 #es_buit
 false
@@ -1015,7 +1015,7 @@ I-102Bis
 1
 ##1
 #num_entrades
-6
+3
 ##3
 #es_buit
 false
@@ -1072,7 +1072,7 @@ I-103
 0
 ##0
 #num_entrades
-6
+3
 ##3
 #es_buit
 false
@@ -1092,7 +1092,7 @@ true
 2
 ##2
 #num_entrades
-6
+3
 ##3
 #es_buit
 false
@@ -1112,7 +1112,7 @@ I-102Bis
 2
 ##2
 #num_entrades
-6
+3
 ##3
 #es_buit
 false
@@ -1169,7 +1169,7 @@ I-103
 0
 ##0
 #num_entrades
-6
+3
 ##3
 #es_buit
 false
@@ -1189,7 +1189,7 @@ I-102Bis
 0
 ##0
 #num_entrades
-6
+3
 ##3
 #es_buit
 false
@@ -1209,7 +1209,7 @@ I-102Bis
 1
 ##1
 #num_entrades
-6
+3
 ##3
 #es_buit
 false
@@ -1270,7 +1270,7 @@ I-103
 0
 ##0
 #num_entrades
-6
+3
 ##3
 #es_buit
 false
@@ -1290,7 +1290,7 @@ I-102
 1
 ##1
 #num_entrades
-6
+3
 ##3
 #es_buit
 false
@@ -1310,7 +1310,7 @@ I-102
 2
 ##2
 #num_entrades
-6
+3
 ##3
 #es_buit
 false
@@ -1371,7 +1371,7 @@ I-102
 1
 ##1
 #num_entrades
-6
+3
 ##3
 #es_buit
 false
@@ -1428,7 +1428,7 @@ I-101
 1
 ##1
 #num_entrades
-6
+3
 ##3
 #es_buit
 false
@@ -1484,7 +1484,7 @@ I-102
 1
 ##1
 #num_entrades
-6
+3
 ##3
 #es_buit
 false
@@ -1540,7 +1540,7 @@ true
 1
 ##1
 #num_entrades
-6
+3
 ##3
 #es_buit
 false
@@ -1591,7 +1591,7 @@ I-101
 0
 ##0
 #num_entrades
-5
+2
 ##2
 #es_buit
 false
@@ -1642,7 +1642,7 @@ true
 1
 ##1
 #num_entrades
-5
+2
 ##2
 #es_buit
 false
@@ -1748,13 +1748,13 @@ false
 false
 ##false
 #c 101
-false
+true
 ##true
 #c 11132
 true
 ##true
 #c 1116
-false
+true
 ##true
 #nom_cr 100
 Error::call_registry:21:Numero inexistent.
@@ -1778,13 +1778,13 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #nom_cr 101
-Error::call_registry:21:Numero inexistent.
+I-101
 ##I-101
 #nom_cr 11132
 I-11132
 ##I-11132
 #nom_cr 1116
-Error::call_registry:21:Numero inexistent.
+I-1116
 ##I-1116
 #num_trucades 100
 Error::call_registry:21:Numero inexistent.
@@ -1808,28 +1808,28 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_trucades 101
-Error::call_registry:21:Numero inexistent.
+0
 ##0
 #num_trucades 11132
 0
 ##0
 #num_trucades 1116
-Error::call_registry:21:Numero inexistent.
+0
 ##0
 #num_entrades
-69
+31
 ##31
 #es_buit
 false
 ##false
 #dump
-11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 
+101 I-101 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 ##101 I-101 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 #r 101
 #r 11132
 #r 1116
 #num_trucades 101
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11132
 1
@@ -1838,13 +1838,13 @@ Error::call_registry:21:Numero inexistent.
 1
 ##1
 #num_entrades
-75
+31
 ##31
 #es_buit
 false
 ##false
 #dump
-
+102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101 1 11132 I-11132 1 1116 I-1116 1 
 ##102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101 1 11132 I-11132 1 1116 I-1116 1 
 #as 101 "I-101Bis"
 #as 11132 "I-11132Bis"
@@ -1859,7 +1859,7 @@ I-11132Bis
 I-1116Bis
 ##I-1116Bis
 #dump
-101 I-101Bis 0 11132 I-11132Bis 1 1116 I-1116Bis 1 
+102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101Bis 1 11132 I-11132Bis 1 1116 I-1116Bis 1 
 ##102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101Bis 1 11132 I-11132Bis 1 1116 I-1116Bis 1 
 #as 11132 "I-101Bis"
 #dump
@@ -1934,10 +1934,10 @@ false
 true
 ##true
 #c 11132
-false
+true
 ##true
 #c 1116
-false
+true
 ##true
 #nom_cr 100
 Error::call_registry:21:Numero inexistent.
@@ -1964,10 +1964,10 @@ Error::call_registry:21:Numero inexistent.
 I-101
 ##I-101
 #nom_cr 11132
-Error::call_registry:21:Numero inexistent.
+I-11132
 ##I-11132
 #nom_cr 1116
-Error::call_registry:21:Numero inexistent.
+I-1116
 ##I-1116
 #num_trucades 100
 Error::call_registry:21:Numero inexistent.
@@ -1994,34 +1994,34 @@ Error::call_registry:21:Numero inexistent.
 0
 ##0
 #num_trucades 11132
-Error::call_registry:21:Numero inexistent.
+0
 ##0
 #num_trucades 1116
-Error::call_registry:21:Numero inexistent.
+0
 ##0
 #num_entrades
-69
+31
 ##31
 #es_buit
 false
 ##false
 #dump
-101 I-101 0 102 I-102 0 103 I-103 0 
+101 I-101 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 ##101 I-101 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 #r 101
 #r 11132
 #r 1116
 #num_trucades 101
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11132
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1116
 1
 ##1
 #dump
-
+102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101 1 11132 I-11132 1 1116 I-1116 1 
 ##102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101 1 11132 I-11132 1 1116 I-1116 1 
 #as 101 "I-101Bis"
 #as 11132 "I-11132Bis"
@@ -2036,7 +2036,7 @@ I-11132Bis
 I-1116Bis
 ##I-1116Bis
 #dump
-101 I-101Bis 0 11132 I-11132Bis 0 1116 I-1116Bis 1 
+102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101Bis 1 11132 I-11132Bis 1 1116 I-1116Bis 1 
 ##102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101Bis 1 11132 I-11132Bis 1 1116 I-1116Bis 1 
 #destroy
 ###!
@@ -2081,34 +2081,34 @@ I-1116Bis
 false
 ##false
 #c 101
-false
+true
 ##true
 #c 102
-false
+true
 ##true
 #c 103
-false
+true
 ##true
 #c 104
-false
+true
 ##true
 #c 105
-false
+true
 ##true
 #c 106
-false
+true
 ##true
 #c 107
-false
+true
 ##true
 #c 108
-false
+true
 ##true
 #c 109
-false
+true
 ##true
 #c 110
-false
+true
 ##true
 #c 111
 false
@@ -2117,34 +2117,34 @@ false
 false
 ##false
 #c 1111
-false
+true
 ##true
 #c 1112
-false
+true
 ##true
 #c 1113
-false
+true
 ##true
 #c 1114
-false
+true
 ##true
 #c 1115
-false
+true
 ##true
 #c 1116
-false
+true
 ##true
 #c 1117
 false
 ##false
 #c 1118
-false
+true
 ##true
 #c 1119
-false
+true
 ##true
 #c 1120
-false
+true
 ##true
 #c 1121
 false
@@ -2153,31 +2153,31 @@ false
 false
 ##false
 #c 11121
-false
+true
 ##true
 #c 11122
-false
+true
 ##true
 #c 11123
-false
+true
 ##true
 #c 11124
-false
+true
 ##true
 #c 11125
-false
+true
 ##true
 #c 11126
-false
+true
 ##true
 #c 11127
-false
+true
 ##true
 #c 11128
-false
+true
 ##true
 #c 11129
-false
+true
 ##true
 #c 11130
 true
@@ -2195,34 +2195,34 @@ false
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #nom_cr 101
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 102
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 103
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 104
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 105
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 106
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 107
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 108
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 109
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 110
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 111
 Error::call_registry:21:Numero inexistent.
@@ -2231,34 +2231,34 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #nom_cr 1111
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1112
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1113
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1114
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1115
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1116
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1117
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #nom_cr 1118
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1119
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1120
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1121
 Error::call_registry:21:Numero inexistent.
@@ -2267,31 +2267,31 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #nom_cr 11121
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11122
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11123
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11124
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11125
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11126
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11127
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11128
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11129
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11130
 
@@ -2309,34 +2309,34 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_trucades 101
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 102
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 103
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 104
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 105
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 106
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 107
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 108
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 109
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 110
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 111
 Error::call_registry:21:Numero inexistent.
@@ -2345,34 +2345,34 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_trucades 1111
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1112
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1113
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1114
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1115
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1116
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1117
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_trucades 1118
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1119
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1120
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1121
 Error::call_registry:21:Numero inexistent.
@@ -2381,31 +2381,31 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_trucades 11121
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11122
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11123
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11124
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11125
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11126
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11127
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11128
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11129
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11130
 1
@@ -2420,7 +2420,7 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_entrades
-69
+31
 ##31
 #es_buit
 false
@@ -2432,16 +2432,16 @@ false
 #r 11132
 #r 1116
 #num_trucades 101
-Error::call_registry:21:Numero inexistent.
+2
 ##2
 #num_trucades 11132
-1
+2
 ##2
 #num_trucades 1116
-1
+2
 ##2
 #num_entrades
-75
+31
 ##31
 #es_buit
 false
@@ -2462,10 +2462,10 @@ I-11132Bis
 I-1116Bis
 ##I-1116Bis
 #num_entrades
-78
+31
 ##31
 #dump
-101 I-101Bis 0 11132 I-11132Bis 1 1116 I-1116Bis 1 
+101 I-101Bis 2 11132 I-11132Bis 2 1116 I-1116Bis 2 
 ##101 I-101Bis 2 11132 I-11132Bis 2 1116 I-1116Bis 2 
 #as 11132 "I-101Bis"
 #dump
@@ -2528,25 +2528,25 @@ true
 true
 ##true
 #c 104
-false
+true
 ##true
 #c 105
-false
+true
 ##true
 #c 106
-false
+true
 ##true
 #c 107
-false
+true
 ##true
 #c 108
-false
+true
 ##true
 #c 109
-false
+true
 ##true
 #c 110
-false
+true
 ##true
 #c 111
 false
@@ -2555,34 +2555,34 @@ false
 false
 ##false
 #c 1111
-false
+true
 ##true
 #c 1112
-false
+true
 ##true
 #c 1113
-false
+true
 ##true
 #c 1114
-false
+true
 ##true
 #c 1115
-false
+true
 ##true
 #c 1116
-false
+true
 ##true
 #c 1117
 false
 ##false
 #c 1118
-false
+true
 ##true
 #c 1119
-false
+true
 ##true
 #c 1120
-false
+true
 ##true
 #c 1121
 false
@@ -2591,40 +2591,40 @@ false
 false
 ##false
 #c 11121
-false
+true
 ##true
 #c 11122
-false
+true
 ##true
 #c 11123
-false
+true
 ##true
 #c 11124
-false
+true
 ##true
 #c 11125
-false
+true
 ##true
 #c 11126
-false
+true
 ##true
 #c 11127
-false
+true
 ##true
 #c 11128
-false
+true
 ##true
 #c 11129
-false
+true
 ##true
 #c 11130
-false
+true
 ##true
 #c 11131
-false
+true
 ##true
 #c 11132
-false
+true
 ##true
 #c 11133
 false
@@ -2642,25 +2642,25 @@ Error::call_registry:21:Numero inexistent.
 
 ##
 #nom_cr 104
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 105
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 106
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 107
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 108
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 109
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 110
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 111
 Error::call_registry:21:Numero inexistent.
@@ -2669,34 +2669,34 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #nom_cr 1111
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1112
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1113
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1114
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1115
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1116
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1117
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #nom_cr 1118
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1119
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1120
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 1121
 Error::call_registry:21:Numero inexistent.
@@ -2705,40 +2705,40 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #nom_cr 11121
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11122
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11123
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11124
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11125
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11126
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11127
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11128
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11129
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11130
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11131
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11132
-Error::call_registry:21:Numero inexistent.
+
 ##
 #nom_cr 11133
 Error::call_registry:21:Numero inexistent.
@@ -2756,25 +2756,25 @@ Error::call_registry:21:Numero inexistent.
 1
 ##1
 #num_trucades 104
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 105
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 106
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 107
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 108
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 109
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 110
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 111
 Error::call_registry:21:Numero inexistent.
@@ -2783,34 +2783,34 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_trucades 1111
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1112
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1113
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1114
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1115
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1116
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1117
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_trucades 1118
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1119
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1120
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 1121
 Error::call_registry:21:Numero inexistent.
@@ -2819,46 +2819,46 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_trucades 11121
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11122
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11123
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11124
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11125
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11126
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11127
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11128
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11129
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11130
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11131
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11132
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11133
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_entrades
-69
+31
 ##31
 #es_buit
 false
@@ -2870,16 +2870,16 @@ false
 #r 11132
 #r 1116
 #num_trucades 101
-Error::call_registry:21:Numero inexistent.
+2
 ##2
 #num_trucades 11132
-Error::call_registry:21:Numero inexistent.
+2
 ##2
 #num_trucades 1116
-1
+2
 ##2
 #num_entrades
-73
+31
 ##31
 #es_buit
 false
@@ -2900,10 +2900,10 @@ I-11132Bis
 I-1116Bis
 ##I-1116Bis
 #num_entrades
-77
+31
 ##31
 #dump
-101 I-101Bis 0 11132 I-11132Bis 0 1116 I-1116Bis 1 
+101 I-101Bis 2 11132 I-11132Bis 2 1116 I-1116Bis 2 
 ##101 I-101Bis 2 11132 I-11132Bis 2 1116 I-1116Bis 2 
 #destroy
 ###!
@@ -2966,13 +2966,13 @@ false
 false
 ##false
 #c 101
-false
+true
 ##true
 #c 11132
-false
+true
 ##true
 #c 1116
-false
+true
 ##true
 #nom_cr 100
 Error::call_registry:21:Numero inexistent.
@@ -2996,13 +2996,13 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #nom_cr 101
-Error::call_registry:21:Numero inexistent.
+I-101
 ##I-101
 #nom_cr 11132
-Error::call_registry:21:Numero inexistent.
+I-11132
 ##I-11132
 #nom_cr 1116
-Error::call_registry:21:Numero inexistent.
+I-1116
 ##I-1116
 #num_trucades 100
 Error::call_registry:21:Numero inexistent.
@@ -3026,28 +3026,28 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_trucades 101
-Error::call_registry:21:Numero inexistent.
+0
 ##0
 #num_trucades 11132
-Error::call_registry:21:Numero inexistent.
+0
 ##0
 #num_trucades 1116
-Error::call_registry:21:Numero inexistent.
+0
 ##0
 #num_entrades
-68
+31
 ##31
 #es_buit
 false
 ##false
 #dump
-11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 
+101 I-101 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 ##101 I-101 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 #r 101
 #r 11132
 #r 1116
 #num_trucades 101
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #num_trucades 11132
 1
@@ -3056,7 +3056,7 @@ Error::call_registry:21:Numero inexistent.
 1
 ##1
 #dump
-
+102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101 1 11132 I-11132 1 1116 I-1116 1 
 ##102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101 1 11132 I-11132 1 1116 I-1116 1 
 #as 101 "I-101Bis"
 #as 11132 "I-11132Bis"
@@ -3071,7 +3071,7 @@ I-11132Bis
 I-1116Bis
 ##I-1116Bis
 #dump
-101 I-101Bis 0 11132 I-11132Bis 1 1116 I-1116Bis 1 
+102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101Bis 1 11132 I-11132Bis 1 1116 I-1116Bis 1 
 ##102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 101 I-101Bis 1 11132 I-11132Bis 1 1116 I-1116Bis 1 
 #as 11132 "I-101Bis"
 #dump
@@ -3122,104 +3122,91 @@ Error::call_registry:22:Nom repetit.
 #as 11131 "I-11131"
 #as 11132 "I-11132"
 #dump
-11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 
+101 I-101 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 ##101 I-101 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 #e 101
-Error::call_registry:21:Numero inexistent.
 #num_entrades
-69
+30
 ##30
 #es_buit
 false
 ##false
 #dump
-11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 
+102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 ##102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 #as 101 "I-101Bis"
 #num_entrades
-72
+31
 ##31
 #dump
-
+101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 ##101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 #e 11132
-Error::call_registry:21:Numero inexistent.
 #num_entrades
-72
-##30
-#es_buit
-true
-##false
-#dump
-
-##101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
-#as 11132 "I-11132Bis"
-#num_entrades
-73
-##31
-#dump
-11132 I-11132Bis 0 
-##101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132Bis 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
-#e 1116
-Error::call_registry:21:Numero inexistent.
-#num_entrades
-73
+30
 ##30
 #es_buit
 false
 ##false
 #dump
-11132 I-11132Bis 0 
+101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
+##101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
+#as 11132 "I-11132Bis"
+#num_entrades
+31
+##31
+#dump
+101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132Bis 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
+##101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132Bis 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
+#e 1116
+#num_entrades
+30
+##30
+#es_buit
+false
+##false
+#dump
+101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132Bis 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 ##101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132Bis 0 1114 I-1114 0 1115 I-1115 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 #as 1116 "I-1116Bis"
 #num_entrades
-75
+31
 ##31
 #dump
-11132 I-11132Bis 0 1116 I-1116Bis 0 
+101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132Bis 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116Bis 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 ##101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132Bis 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116Bis 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 #e 11128
-Error::call_registry:21:Numero inexistent.
 #e 11128
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #num_entrades
-75
+30
 ##30
 #es_buit
 false
 ##false
 #dump
-11132 I-11132Bis 0 1116 I-1116Bis 0 
+101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132Bis 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116Bis 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 ##101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132Bis 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116Bis 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 #as 11128 "I-11128Bis"
 #num_entrades
-78
+31
 ##31
 #dump
-11128 I-11128Bis 0 11132 I-11132Bis 0 1116 I-1116Bis 0 
+101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128Bis 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132Bis 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116Bis 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 ##101 I-101Bis 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128Bis 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132Bis 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116Bis 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 #e 1118
-Error::call_registry:21:Numero inexistent.
 #e 1119
-Error::call_registry:21:Numero inexistent.
 #e 1120
-Error::call_registry:21:Numero inexistent.
 #e 11121
-Error::call_registry:21:Numero inexistent.
 #e 11122 
-Error::call_registry:21:Numero inexistent.
 #e 11123
-Error::call_registry:21:Numero inexistent.
 #e 11124
-Error::call_registry:21:Numero inexistent.
 #e 11125
-Error::call_registry:21:Numero inexistent.
 #e 11126
-Error::call_registry:21:Numero inexistent.
 #e 11127
-Error::call_registry:21:Numero inexistent.
 #e 11128
+Error::call_registry:21:Numero inexistent.
 #e 11129
 Error::call_registry:21:Numero inexistent.
 #e 11130
@@ -3227,14 +3214,11 @@ Error::call_registry:21:Numero inexistent.
 #e 11131
 Error::call_registry:21:Numero inexistent.
 #e 11132
+Error::call_registry:21:Numero inexistent.
 #e 1115
-Error::call_registry:21:Numero inexistent.
 #e 1114
-Error::call_registry:21:Numero inexistent.
 #e 1113
-Error::call_registry:21:Numero inexistent.
 #e 1112
-Error::call_registry:21:Numero inexistent.
 #e 1111
 Error::call_registry:21:Numero inexistent.
 #e 110
@@ -3258,8 +3242,9 @@ Error::call_registry:21:Numero inexistent.
 #e 101
 Error::call_registry:21:Numero inexistent.
 #e 1116
+Error::call_registry:21:Numero inexistent.
 #num_entrades
-75
+17
 ##0
 #dump
 
@@ -3308,7 +3293,7 @@ Error::call_registry:21:Numero inexistent.
 ##
 #e 101
 #num_entrades
-68
+30
 ##30
 #c 101 
 false
@@ -3324,15 +3309,14 @@ false
 ##false
 #as 101 "I-101Bis"
 #num_entrades
-70
+31
 ##31
 #dump
-
+101 I-101Bis 0 
 ##101 I-101Bis 0 
 #e 11132
-Error::call_registry:21:Numero inexistent.
 #num_entrades
-70
+30
 ##30
 #c 11132
 false
@@ -3344,19 +3328,18 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #dump
-
+101 I-101Bis 0 
 ##101 I-101Bis 0 
 #as 11132 "I-11132Bis"
 #num_entrades
-71
+31
 ##31
 #dump
-11132 I-11132Bis 0 
+101 I-101Bis 0 11132 I-11132Bis 0 
 ##101 I-101Bis 0 11132 I-11132Bis 0 
 #e 1116
-Error::call_registry:21:Numero inexistent.
 #num_entrades
-71
+30
 ##30
 #c 1116
 false
@@ -3368,19 +3351,18 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #dump
-11132 I-11132Bis 0 
+101 I-101Bis 0 11132 I-11132Bis 0 
 ##101 I-101Bis 0 11132 I-11132Bis 0 
 #as 1116 "I-1116Bis"
 #num_entrades
-73
+31
 ##31
 #dump
-11132 I-11132Bis 0 1116 I-1116Bis 0 
+101 I-101Bis 0 11132 I-11132Bis 0 1116 I-1116Bis 0 
 ##101 I-101Bis 0 11132 I-11132Bis 0 1116 I-1116Bis 0 
 #e 11128
-Error::call_registry:21:Numero inexistent.
 #num_entrades
-73
+30
 ##30
 #c 11128
 false
@@ -3392,36 +3374,27 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #dump
-11132 I-11132Bis 0 1116 I-1116Bis 0 
+101 I-101Bis 0 11132 I-11132Bis 0 1116 I-1116Bis 0 
 ##101 I-101Bis 0 11132 I-11132Bis 0 1116 I-1116Bis 0 
 #as 11128 "I-11128Bis"
 #dump
-11128 I-11128Bis 0 11132 I-11132Bis 0 1116 I-1116Bis 0 
+101 I-101Bis 0 11128 I-11128Bis 0 11132 I-11132Bis 0 1116 I-1116Bis 0 
 ##101 I-101Bis 0 11128 I-11128Bis 0 11132 I-11132Bis 0 1116 I-1116Bis 0 
 #num_entrades
-76
+31
 ##31
 #e 1118
-Error::call_registry:21:Numero inexistent.
 #e 1119
-Error::call_registry:21:Numero inexistent.
 #e 1120
-Error::call_registry:21:Numero inexistent.
 #e 11121
-Error::call_registry:21:Numero inexistent.
 #e 11122 
-Error::call_registry:21:Numero inexistent.
 #e 11123
-Error::call_registry:21:Numero inexistent.
 #e 11124
-Error::call_registry:21:Numero inexistent.
 #e 11125
-Error::call_registry:21:Numero inexistent.
 #e 11126
-Error::call_registry:21:Numero inexistent.
 #e 11127
-Error::call_registry:21:Numero inexistent.
 #e 11128
+Error::call_registry:21:Numero inexistent.
 #e 11129
 Error::call_registry:21:Numero inexistent.
 #e 11130
@@ -3429,14 +3402,11 @@ Error::call_registry:21:Numero inexistent.
 #e 11131
 Error::call_registry:21:Numero inexistent.
 #e 11132
+Error::call_registry:21:Numero inexistent.
 #e 1115
-Error::call_registry:21:Numero inexistent.
 #e 1114
-Error::call_registry:21:Numero inexistent.
 #e 1113
-Error::call_registry:21:Numero inexistent.
 #e 1112
-Error::call_registry:21:Numero inexistent.
 #e 1111
 Error::call_registry:21:Numero inexistent.
 #e 110
@@ -3460,8 +3430,9 @@ Error::call_registry:21:Numero inexistent.
 #e 101
 Error::call_registry:21:Numero inexistent.
 #e 1116
+Error::call_registry:21:Numero inexistent.
 #num_entrades
-73
+17
 ##0
 #dump
 
@@ -3624,13 +3595,13 @@ false
 false
 ##false
 #c63Bis c 101
-false
+true
 ##true
 #c63Bis c 11132
-false
+true
 ##true
 #c63Bis c 1116
-false
+true
 ##true
 #c63Bis nom_cr 100
 Error::call_registry:21:Numero inexistent.
@@ -3654,13 +3625,13 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #c63Bis nom_cr 101
-Error::call_registry:21:Numero inexistent.
+I-101
 ##I-101
 #c63Bis nom_cr 11132
-Error::call_registry:21:Numero inexistent.
+I-11132
 ##I-11132
 #c63Bis nom_cr 1116
-Error::call_registry:21:Numero inexistent.
+I-1116
 ##I-1116
 #c63Bis num_trucades 100
 Error::call_registry:21:Numero inexistent.
@@ -3684,22 +3655,22 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #c63Bis num_trucades 101
-Error::call_registry:21:Numero inexistent.
+0
 ##0
 #c63Bis num_trucades 11132
-Error::call_registry:21:Numero inexistent.
+0
 ##0
 #c63Bis num_trucades 1116
-Error::call_registry:21:Numero inexistent.
+0
 ##0
 #c63Bis num_entrades
-68
+31
 ##31
 #c63Bis es_buit
 false
 ##false
 #c63Bis dump
-11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 
+101 I-101 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 ##101 I-101 0 102 I-102 0 103 I-103 0 104 I-104 0 105 I-105 0 106 I-106 0 107 I-107 0 108 I-108 0 109 I-109 0 110 I-110 0 1111 I-1111 0 1112 I-1112 0 11121 I-11121 0 11122 I-11122 0 11123 I-11123 0 11124 I-11124 0 11125 I-11125 0 11126 I-11126 0 11127 I-11127 0 11128 I-11128 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11131 I-11131 0 11132 I-11132 0 1114 I-1114 0 1115 I-1115 0 1116 I-1116 0 1118 I-1118 0 1119 I-1119 0 1120 I-1120 0 
 #c63Bis destroy
 ###!
@@ -3861,13 +3832,13 @@ false
 false
 ##false
 #c73Bis c 101
-false
+true
 ##true
 #c73Bis c 11132
-false
+true
 ##true
 #c73Bis c 1116
-false
+true
 ##true
 #c73Bis nom_cr 100
 Error::call_registry:21:Numero inexistent.
@@ -3891,13 +3862,13 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #c73Bis nom_cr 101
-Error::call_registry:21:Numero inexistent.
+I-101
 ##I-101
 #c73Bis nom_cr 11131
-Error::call_registry:21:Numero inexistent.
+
 ##
 #c73Bis nom_cr 1116
-Error::call_registry:21:Numero inexistent.
+I-1116
 ##I-1116
 #c73Bis num_trucades 100
 Error::call_registry:21:Numero inexistent.
@@ -3921,22 +3892,22 @@ Error::call_registry:21:Numero inexistent.
 Error::call_registry:21:Numero inexistent.
 ##Error::call_registry:21:Numero inexistent.
 #c73Bis num_trucades 101
-Error::call_registry:21:Numero inexistent.
+0
 ##0
 #c73Bis num_trucades 11131
-Error::call_registry:21:Numero inexistent.
+1
 ##1
 #c73Bis num_trucades 1116
-Error::call_registry:21:Numero inexistent.
+0
 ##0
 #c73Bis num_entrades
-68
+31
 ##31
 #c73Bis es_buit
 false
 ##false
 #c73Bis dump
-11126 I-11126 0 
+101 I-101 0 106 I-106 0 108 I-108 0 109 I-109 0 110 I-110 0 11123 I-11123 0 11125 I-11125 0 11126 I-11126 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11132 I-11132 0 1114 I-1114 0 1116 I-1116 0 1120 I-1120 0 
 ##101 I-101 0 106 I-106 0 108 I-108 0 109 I-109 0 110 I-110 0 11123 I-11123 0 11125 I-11125 0 11126 I-11126 0 11129 I-11129 0 1113 I-1113 0 11130 I-11130 0 11132 I-11132 0 1114 I-1114 0 1116 I-1116 0 1120 I-1120 0 
 #c73Bis destroy
 ###!
