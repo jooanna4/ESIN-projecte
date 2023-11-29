@@ -134,8 +134,10 @@ call_registry::node* call_registry::insereix_numero(node *n, nat num, const stri
 // Pre: el número num no existeix en l'arbre AVL amb arrel n
 // Post: retorna l'arrel de l'arbre AVL actualitzat amb la inserció del
 //       número num mantenint totes les propietats de l'arbre AVL
+   cout << "numero: " << num << " entra a insereix" << endl; 
     _mida++;
     if (n == nullptr) {
+        cout << "insereix el node" << endl;
         node *aux = new node;
         phone ph(num, name, compt);
         aux->_ph = ph;
@@ -145,14 +147,18 @@ call_registry::node* call_registry::insereix_numero(node *n, nat num, const stri
         return aux;
     }
     else {
+        
         if (num < n->_ph.numero())
             n->_esq = insereix_numero(n->_esq, num, name, compt);
         else
             n->_dret = insereix_numero(n->_dret, num, name, compt);
     
         n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
+        cout << "altura: " << n->_altura << endl; 
         nat fact = factor_equilibri(n);
-    
+        cout << "factor: " << fact << endl; 
+
+
         if (fact > 1 && n->_esq != nullptr) {
             if (num < n->_esq->_ph.numero())
                 return rotacio_dreta(n);
