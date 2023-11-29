@@ -7,10 +7,8 @@ nat call_registry::altura(node *n) {
     nat aux;
     if (n == nullptr)
         aux = 0;
-    else {
-        // cout << "Altura: " << n->_altura << endl;
+    else 
         aux = n->_altura;
-    }
     return aux;
 }
 
@@ -20,10 +18,9 @@ int call_registry::factor_equilibri(node *n) {
     int aux;
     if (n == nullptr)
         aux = 0;
-    else {
+    else 
         aux = altura(n->_esq) - altura(n->_dret);
-    }
-    // cout << "Factor equilibri: " << aux << endl;
+    
     return aux;
 }
 
@@ -139,9 +136,7 @@ call_registry::node* call_registry::insereix_numero(node *n, nat num, const stri
 // Post: retorna l'arrel de l'arbre AVL actualitzat amb la inserció del
 //       número num mantenint totes les propietats de l'arbre AVL
     _mida++;
->>>>>>> 8b5720bcc32a6baa829fdfebe5432220d27ef54d
     if (n == nullptr) {
-        cout << "insereix el node" << endl;
         node *aux = new node;
         phone ph(num, name, compt);
         aux->_ph = ph;
@@ -149,41 +144,30 @@ call_registry::node* call_registry::insereix_numero(node *n, nat num, const stri
         aux->_esq = nullptr;
         aux->_dret = nullptr;
         _mida++;
-        // cout << "Insereix node, " << num <<" amb mida: " << _mida << endl;
         return aux;
     }
     else {
         if (num < n->_ph.numero())
->>>>>>> 8b5720bcc32a6baa829fdfebe5432220d27ef54d
             n->_esq = insereix_numero(n->_esq, num, name, compt);
-        }
-        else {
-            // cout << "Insereix dreta" << endl;
+        else 
             n->_dret = insereix_numero(n->_dret, num, name, compt);
-        }
     
         n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
         nat fact = factor_equilibri(n);
     
         if (fact > 1 && n->_esq != nullptr) {
-            if (num < n->_esq->_ph.numero()) {
-                // cout << "Rotació dreta" << endl;
+            if (num < n->_esq->_ph.numero()) 
                 return rotacio_dreta(n);
-            }
             else if (num > n->_esq->_ph.numero()) {
-                // cout << "Rotació esquerra" << endl;
                 n->_esq = rotacio_esquerra(n->_esq);
                 return rotacio_dreta(n);
             }
         }
         
         else if (fact < -1 && n->_dret != nullptr) {
-            if (num > n->_dret->_ph.numero()) {
-                // cout << "Rotació esquerra" << endl;
+            if (num > n->_dret->_ph.numero()) 
                 return rotacio_esquerra(n);
-            }
             else if (num < n->_dret->_ph.numero()) {
-                // cout << "Rotació dreta" << endl;
                 n->_dret = rotacio_dreta(n->_dret);
                 return rotacio_esquerra(n);
             }
@@ -302,17 +286,12 @@ void call_registry::registra_trucada(nat num) throw(error) {
 // Post: Si el número num existeix, s'incrementa el seu comptador de trucades. 
 //       Si el número num no estava prèviament, afegeix una nova entrada
 //       amb el número de telèfon donat, un nom buit i el comptador a 1.
-    // // cout << "mida inicial: " << _mida << endl;
     if (conte(num)) {
-        // // cout << "conte el numero" << endl;
         node *aux = busca(_arrel, num);
         aux->_ph++;
     }
     else
         _arrel = insereix_numero(_arrel, num, "", 1);
-    // cout << "Arrel: ";
-    // if (_arrel == nullptr) // cout << "null" << endl;
-    // else // cout << "no null, amb mida: " << _mida << endl;
 }
 
 void call_registry::assigna_nom(nat num, const string& name) throw(error) {
