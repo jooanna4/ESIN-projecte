@@ -181,13 +181,13 @@ call_registry::node* call_registry::elimina_numero(node *n, nat num) {
 // Pre: el número num existeix en l'arbre AVL amb arrel n
 // Post: retorna l'arrel de l'arbre AVL actualitzat amb l'eliminació del
 //       número num mantenint totes les propietats de l'arbre AVL
-    node *aux = n;
     if (n != nullptr) {
         if (num < n->_ph.numero())
             n->_esq = elimina_numero(n->_esq, num);
         else if (num > n->_ph.numero())
             n->_dret = elimina_numero(n->_dret, num);
         else {
+            node *aux = n;
             n = ajunta (n->_esq, n->_dret);
             delete (aux);
             _mida--;
