@@ -154,21 +154,21 @@ call_registry::node* call_registry::insereix_numero(node *n, nat num, const stri
         n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
         int fact = factor_equilibri(n);
     
-        if (fact > 1 && n->_esq != nullptr) {
-            if (num < n->_esq->_ph.numero()) 
-                return rotacio_dreta(n);
-            else if (num > n->_esq->_ph.numero()) {
+        if (fact > 1) {
+            if (factor_equilibri(n->_esq) >= 0)
+                n = rotacio_dreta(n);
+            else if (factor_equilibri(n->_esq) < 0) {
                 n->_esq = rotacio_esquerra(n->_esq);
-                return rotacio_dreta(n);
+                n = rotacio_dreta(n);
             }
         }
-        
-        else if (fact < -1 && n->_dret != nullptr) {
-            if (num > n->_dret->_ph.numero()) 
-                return rotacio_esquerra(n);
-            else if (num < n->_dret->_ph.numero()) {
+
+        else if (fact < -1) {
+            if (factor_equilibri(n->_dret) <= 0)
+                n = rotacio_esquerra(n);
+            else if (factor_equilibri(n->_dret) > 0) {
                 n->_dret = rotacio_dreta(n->_dret);
-                return rotacio_esquerra(n);
+                n = rotacio_esquerra(n);
             }
         }
     }
@@ -215,26 +215,26 @@ call_registry::node* call_registry::elimina_numero(node *n, nat num) {
         }
     }
 
-    // Si el árbol tenía solo un nodo, lo eliminamos directamente
     if (n != nullptr) {
-        // Actualizamos la altura y realizamos rotaciones si es necesario
-        n->_altura = 1 + max(altura(n->_esq), altura(n->_dret));
+        n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
         int fact = factor_equilibri(n);
 
-        // Casos de rotación para mantener el equilibrio
-        if (fact > 1 && factor_equilibri(n->_esq) >= 0) {
-            return rotacio_dreta(n);
+        if (fact > 1) {
+            if (factor_equilibri(n->_esq) >= 0)
+                n = rotacio_dreta(n);
+            else if (factor_equilibri(n->_esq) < 0) {
+                n->_esq = rotacio_esquerra(n->_esq);
+                n = rotacio_dreta(n);
+            }
         }
-        if (fact > 1 && factor_equilibri(n->_esq) < 0) {
-            n->_esq = rotacio_esquerra(n->_esq);
-            return rotacio_dreta(n);
-        }
-        if (fact < -1 && factor_equilibri(n->_dret) <= 0) {
-            return rotacio_esquerra(n);
-        }
-        if (fact < -1 && factor_equilibri(n->_dret) > 0) {
-            n->_dret = rotacio_dreta(n->_dret);
-            return rotacio_esquerra(n);
+
+        else if (fact < -1) {
+            if (factor_equilibri(n->_dret) <= 0)
+                n = rotacio_esquerra(n);
+            else if (factor_equilibri(n->_dret) > 0) {
+                n->_dret = rotacio_dreta(n->_dret);
+                n = rotacio_esquerra(n);
+            }
         }
     }
 
@@ -253,10 +253,9 @@ call_registry& call_registry::operator=(const call_registry& R) throw(error) {
 // Pre: cert
 // Post: el paràmetre implícit és una còpia de R
     _mida = R._mida;
-    //if (this != R) {          (s'hauria de fer l'operator == i !=)
-        esborra_arbre(_arrel);
-        _arrel = copia_arbre(R._arrel);
-    //}
+    esborra_arbre(_arrel);
+    _arrel = copia_arbre(R._arrel);
+    
     return *this;
 }
 
