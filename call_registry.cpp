@@ -14,7 +14,7 @@ nat call_registry::altura(node *n) {
 
 int call_registry::factor_equilibri(node *n) {
 // Pre: Cert
-// Post: retorna el factor d'equilibri de l'arbre AVL amb arrel n
+// Post: retorna el factor d'equilibri del node n
     int aux;
     if (n == nullptr)
         aux = 0;
@@ -51,8 +51,8 @@ void call_registry::rec_inordre(node *n, vector<phone>& V) {
 // Mètodes privats per la constructora i destructora
 call_registry::node* call_registry::copia_arbre(node *n) {
 // Pre: Cert
-// Post: retorna un punter que apunta a l'arrel de l'AVL
-//       que es còpia de l'arbre AVL apuntat per n
+// Post: retorna un punter que apunta a l'arrel de l'arbr AVL
+//       que és còpia de l'arbre AVL amb arrel n
     node *aux(nullptr);
     if (n != nullptr) {
         aux = new node;
@@ -83,8 +83,8 @@ void call_registry::esborra_arbre(node *n) {
 // Metodes privats per inserir i eliminar un número a l'AVL
 call_registry::node* call_registry::rotacio_esquerra(node *n) {
 // Pre: cert
-// Post: retorna el node arrel de l'arbre AVL després de realitzar
-//       una rotació cap a l'esquerra del node arrel n inicial
+// Post: retorna el node pare de l'arbre AVL després de realitzar
+//       una rotació cap a l'esquerra del node pare n inicial
     if (n != nullptr) {
         node *nova_n = n->_dret;
         node *aux(nullptr);
@@ -108,8 +108,8 @@ call_registry::node* call_registry::rotacio_esquerra(node *n) {
 
 call_registry::node* call_registry::rotacio_dreta(node *n) {
 // Pre: cert
-// Post: retorna el node arrel de l'arbre AVL després de realitzar
-//       una rotació cap a la dreta del node arrel n inicial
+// Post: retorna el node pare de l'arbre AVL després de realitzar
+//       una rotació cap a la dreta del node pare n inicial
     if (n != nullptr) {
         node *nova_n = n->_esq;
         node *aux (nullptr);
@@ -178,41 +178,39 @@ call_registry::node* call_registry::insereix_numero(node *n, nat num, const stri
 
 call_registry::node* call_registry::elimina_numero(node *n, nat num) {
 // Pre: el número num existeix en l'arbre AVL amb arrel n
-// Post: retorna l'arrel de l'arbre AVL actualitzat amb l'eliminació del
+// Post: retorna l'arrel de l'arbre AVL actualitzat amb la eliminació del
 //       número num mantenint totes les propietats de l'arbre AVL
     if (n != nullptr) {
-        if (num < n->_ph.numero()) {
-            // El número a eliminar está en el subárbol izquierdo
+        if (num < n->_ph.numero()) 
             n->_esq = elimina_numero(n->_esq, num);
-        } else if (num > n->_ph.numero()) {
-            // El número a eliminar está en el subárbol derecho
+        else if (num > n->_ph.numero())
             n->_dret = elimina_numero(n->_dret, num);
-        } else {
-            // Encontramos el nodo a eliminar
+        else {
             if (n->_esq == nullptr || n->_dret == nullptr) {
-                // Caso 1: 0 o 1 hijo
-                node* temp = (n->_esq != nullptr) ? n->_esq : n->_dret;
-                if (temp == nullptr) {
-                    // No tiene hijos, simplemente eliminamos el nodo
-                    temp = n;
+                node *aux;
+
+                if (n->_esq != nullptr) aux = n->_esq;
+                else aux = n->_dret;
+
+                if (aux == nullptr) {       // No té fills
+                    aux = n;
                     n = nullptr;
-                } else {
-                    // Copiamos el contenido del hijo no nulo
-                    *n = *temp;
-                }
+                } 
+                else                        // Té 1 fill
+                    *n = *aux;
+                
                 _mida--;
-                delete temp;
-            } else {
-                // Caso 2: 2 hijos
-                // Encontramos el sucesor inorden del nodo a eliminar
-                node* temp = n->_dret;
-                while (temp->_esq != nullptr) {
-                    temp = temp->_esq;
+                delete aux;
+            }
+            else {
+                node* aux = n->_dret;
+                while (aux->_esq != nullptr) {
+                    // Trobem el node amb el número mínim de l'arbre de la dreta
+                    // Aquest serà el successor del número a eliminar
+                    aux = aux->_esq;
                 }
-                // Copiamos el contenido del sucesor inorden
-                n->_ph = temp->_ph;
-                // Eliminamos el sucesor inorden
-                n->_dret = elimina_numero(n->_dret, temp->_ph.numero());
+                n->_ph = aux->_ph;
+                n->_dret = elimina_numero(n->_dret, aux->_ph.numero());
             }
         }
     }
