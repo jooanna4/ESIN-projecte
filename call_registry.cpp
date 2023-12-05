@@ -1,6 +1,7 @@
 #include "call_registry.hpp"
 
 /*----------------------< MÈTODES PRIVATS >-----------------------*/
+// Cost: θ(1)
 nat call_registry::altura(node *n) {
 // Pre: cert
 // Post: retorna l'altura del node n
@@ -12,6 +13,7 @@ nat call_registry::altura(node *n) {
     return aux;
 }
 
+// Cost: θ(1)
 int call_registry::factor_equilibri(node *n) {
 // Pre: Cert
 // Post: retorna el factor d'equilibri del node n
@@ -24,6 +26,7 @@ int call_registry::factor_equilibri(node *n) {
     return aux;
 }
 
+// Cost: θ(log (n))
 call_registry::node* call_registry::busca(node *n, nat num) {
 // Pre: l'arbre amb arrel n conté el número num
 // Post: retorna un punter al node on es troba el número num
@@ -36,6 +39,7 @@ call_registry::node* call_registry::busca(node *n, nat num) {
     return n;
 }
 
+// Cost: θ(n)
 void call_registry::rec_inordre(node *n, vector<phone>& V) {
 // Pre: el vector V és buit
 // Post: el vector V conté totes les entrades phone de l'arbre
@@ -49,6 +53,8 @@ void call_registry::rec_inordre(node *n, vector<phone>& V) {
 }
 
 // Mètodes privats per la constructora i destructora
+
+// Cost: θ(n)
 call_registry::node* call_registry::copia_arbre(node *n) {
 // Pre: Cert
 // Post: retorna un punter que apunta a l'arrel de l'arbr AVL
@@ -69,6 +75,7 @@ call_registry::node* call_registry::copia_arbre(node *n) {
     return aux;
 }
 
+// Cost: θ(n)
 void call_registry::esborra_arbre(node *n) {
 // Pre: Cert
 // Post: Allibera espai de la memòria de l'arbre AVL apuntat per n. 
@@ -81,6 +88,8 @@ void call_registry::esborra_arbre(node *n) {
 }
 
 // Metodes privats per inserir i eliminar un número a l'AVL
+
+// Cost: θ(1)
 call_registry::node* call_registry::rotacio_esquerra(node *n) {
 // Pre: cert
 // Post: retorna el node pare de l'arbre AVL després de realitzar
@@ -106,6 +115,7 @@ call_registry::node* call_registry::rotacio_esquerra(node *n) {
     return n;
 }
 
+// Cost: θ(1)
 call_registry::node* call_registry::rotacio_dreta(node *n) {
 // Pre: cert
 // Post: retorna el node pare de l'arbre AVL després de realitzar
@@ -131,6 +141,7 @@ call_registry::node* call_registry::rotacio_dreta(node *n) {
     return n;
 }
 
+// Cost: θ(log (n))
 call_registry::node* call_registry::insereix_numero(node *n, nat num, const string& name, nat compt) {
 // Pre: el número num no existeix en l'arbre AVL amb arrel n
 // Post: retorna l'arrel de l'arbre AVL actualitzat amb la inserció del
@@ -176,6 +187,7 @@ call_registry::node* call_registry::insereix_numero(node *n, nat num, const stri
     return n;
 }
 
+// Cost: θ(log (n))
 call_registry::node* call_registry::elimina_numero(node *n, nat num) {
 // Pre: el número num existeix en l'arbre AVL amb arrel n
 // Post: retorna l'arrel de l'arbre AVL actualitzat amb la eliminació del
@@ -192,11 +204,11 @@ call_registry::node* call_registry::elimina_numero(node *n, nat num) {
                 if (n->_esq != nullptr) aux = n->_esq;
                 else aux = n->_dret;
 
-                if (aux == nullptr) {       // No té fills
+                if (aux == nullptr) {
                     aux = n;
                     n = nullptr;
                 } 
-                else                        // Té 1 fill
+                else
                     *n = *aux;
                 
                 _mida--;
@@ -243,12 +255,15 @@ call_registry::node* call_registry::elimina_numero(node *n, nat num) {
 
 
 /*----------------------< MÈTODES PÚBLICS >-----------------------*/
+// Cost: θ(1)
 call_registry::call_registry() throw(error) : _arrel(nullptr), _mida(0) {}
 
+// Cost: θ(n)
 call_registry::call_registry(const call_registry& R) throw(error) : _mida(R._mida) {
-    _arrel = copia_arbre(R._arrel);
+    _arrel = copia_arbre(R._arrel);             // Cost: θ(n)
 }
 
+// Cost: θ(n)
 call_registry& call_registry::operator=(const call_registry& R) throw(error) {
 // Pre: cert
 // Post: el paràmetre implícit és una còpia de R
@@ -259,11 +274,13 @@ call_registry& call_registry::operator=(const call_registry& R) throw(error) {
     return *this;
 }
 
+// Cost: θ(n)
 call_registry::~call_registry() throw() {
     esborra_arbre(_arrel);
     _mida = 0;
 }
 
+// Cost: θ(log (n))
 void call_registry::registra_trucada(nat num) throw(error) {
 // Pre: Cert
 // Post: Si el número num existeix, s'incrementa el seu comptador de trucades. 
@@ -277,6 +294,7 @@ void call_registry::registra_trucada(nat num) throw(error) {
         _arrel = insereix_numero(_arrel, num, "", 1);
 }
 
+// Cost: θ(log (n))
 void call_registry::assigna_nom(nat num, const string& name) throw(error) {
 // Pre: Cert
 // Post: Assigna el nom indicat al número donat. Si el número no 
@@ -293,6 +311,7 @@ void call_registry::assigna_nom(nat num, const string& name) throw(error) {
     }
 }
 
+// Cost: θ(log (n))
 void call_registry::elimina(nat num) throw(error) {
 // Pre: Cert
 // Post: Elimina l'entrada corresponent al telèfon amb el número donat.
@@ -303,6 +322,7 @@ void call_registry::elimina(nat num) throw(error) {
         _arrel = elimina_numero(_arrel, num);
 }
 
+// Cost: θ(log (n))
 bool call_registry::conte(nat num) const throw() { 
 // Pre: Cert
 // Post: retorna cert si el paràmetre implícit conté el número num
@@ -320,6 +340,7 @@ bool call_registry::conte(nat num) const throw() {
     return found;
 }
 
+// Cost: θ(log (n))
 string call_registry::nom(nat num) const throw(error) {
 // Pre: Cert
 // Post: Retorna el nom vinculat amb el número num. Si el número no
@@ -332,6 +353,7 @@ string call_registry::nom(nat num) const throw(error) {
     }
 }
 
+// Cost: θ(log (n))
 nat call_registry::num_trucades(nat num) const throw(error) {
 // Pre: Cert
 // Post: Retorna la freqüència vinculada amb el número num. Si el número no
@@ -344,6 +366,7 @@ nat call_registry::num_trucades(nat num) const throw(error) {
     }
 }
 
+// Cost: θ(1)
 bool call_registry::es_buit() const throw() {
 // Pre: Cert
 // Post: Retorna cert si no hi ha cap número registrat, en cas
@@ -351,12 +374,14 @@ bool call_registry::es_buit() const throw() {
     return (_arrel == nullptr);
 }
 
+// Cost: θ(1)
 nat call_registry::num_entrades() const throw() {
 // Pre: Cert
 // Post: Retorna el número d'entrades (telèfons) que hi ha al call_registry
     return _mida;
 }
 
+// Cost: θ(n^2)
 void call_registry::dump(vector<phone>& V) const throw(error) {
     rec_inordre(_arrel, V);
 
