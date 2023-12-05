@@ -1,5 +1,11 @@
 /*
-    hem escollit la 
+    Hem escollit l'estructura AVL ordenada per ordre de números de
+    telèfon ja que aquests, segons l'enunciat, no es poden repetir.
+    A més, és una estructura amb un nombre de dades no limitat.
+    En la majoria de funcions, hem de recòrrer l'arbre des de l'arrel 
+    a qualsevol fulla, això vol dir que els seus costos son de θ(h),
+    sent h la seva alçada. En aquesta estructura (AVL), el cost
+    d'aquestes operacions serà de θ(log (n)).
 */
 
 struct node {
@@ -14,7 +20,7 @@ nat _mida;              // Número de telefons que hi ha en l'arbre AVL
 // Metodes privats
 static nat altura(node *n);
 static int factor_equilibri(node *n);
-static node* busca(node *n, nat num);        // Busca el telefon num dintre del AVL amb arrel n
+static node* busca(node *n, nat num);
 static void rec_inordre(node *n, vector<phone>& V);
 
 // Mètodes privats per la constructora i destructora
