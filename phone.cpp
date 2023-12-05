@@ -1,6 +1,7 @@
 #include "phone.hpp"
 #include <cstring>
 
+// Cost: θ(name.size())
 phone::phone(nat num, const string& name, nat compt) throw(error) {
     bool found(false);
     nat i = 0;
@@ -22,12 +23,14 @@ phone::phone(nat num, const string& name, nat compt) throw(error) {
     }
 }
 
+// Cost: θ(1)
 phone::phone(const phone& T) throw(error) {
     _num = T._num;
     _name = T._name;
     _compt = T._compt;
 }
 
+// Cost: θ(1)
 phone& phone::operator=(const phone& T) throw(error) {
     _num = T._num;
     _name = T._name;
@@ -35,31 +38,38 @@ phone& phone::operator=(const phone& T) throw(error) {
     return *this;
 }
 
+// Cost: θ(1)
 phone::~phone() throw() {}
 
+// Cost: θ(1)
 nat phone::numero() const throw() {
     return _num;
 }
 
+// Cost: θ(1)
 string phone::nom() const throw() {
     return _name;
 }
 
+// Cost: θ(1)
 nat phone::frequencia() const throw() {
     return _compt;
 }
 
+// Cost: θ(1)
 phone& phone::operator++() throw() {
     _compt++;
     return *this;
 }
 
+// Cost: θ(1)
 phone phone::operator++(int) throw() {
     phone aux(*this);
     _compt++;
     return aux;
 }
 
+// Cost: θ(1)
 bool phone::operator==(const phone& T) const throw() {
     bool found(false);
     if (_compt == T._compt &&
@@ -69,10 +79,12 @@ bool phone::operator==(const phone& T) const throw() {
     return found;
 }
 
+// Cost: θ(1)
 bool phone::operator!=(const phone& T) const throw() {
     return !(*this == T);
 }
 
+// Cost: θ(name.size())
 bool phone::operator>(const phone& T) const throw() {
     bool found(false);
     if (_compt > T._compt)
@@ -102,14 +114,17 @@ bool phone::operator>(const phone& T) const throw() {
     return found;
 }
 
+// Cost: θ(name.size())
 bool phone::operator<(const phone& T) const throw() {
     return T > (*this);
 }
 
+// Cost: θ(name.size())
 bool phone::operator<=(const phone& T) const throw() {
     return ((*this) == T || (*this < T));
 }
 
+// Cost: θ(name.size())
 bool phone::operator>=(const phone& T) const throw() {
     return ((*this) == T || (*this > T));
 }

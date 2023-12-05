@@ -1,2 +1,8 @@
+/*
+    Hem escollit una variable natural per representar el número
+    de telèfon i el comptador ja que són variables que mai podran
+    ser negatives. Per representar el nom, hem escollit la variable string
+*/
+
 nat _num, _compt;
 string _name;
