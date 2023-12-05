@@ -21,12 +21,8 @@ static void rec_inordre(node *n, vector<phone>& V);
 static node* copia_arbre(node *n);
 static void esborra_arbre(node *n);
 
-// Metodes privats per inserir un numero a l'AVL
+// Metodes privats per inserir i eliminar un numero a l'AVL
 node* insereix_numero(node *n, nat num, const string& name, nat compt);
 static node* rotacio_esquerra(node *n);
 static node* rotacio_dreta(node *n);
-
-// Metodes privats per eliminar un numero a l'AVL
 node* elimina_numero(node *n, nat num);
-static node* ajunta(node* n1, node* n2);
-static node* elimina_maxim(node *n);

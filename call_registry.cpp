@@ -3,7 +3,7 @@
 /*----------------------< MÈTODES PRIVATS >-----------------------*/
 nat call_registry::altura(node *n) {
 // Pre: cert
-// Post: retorna l'altura de l'arbre amb arrel n
+// Post: retorna l'altura del node n
     nat aux;
     if (n == nullptr)
         aux = 0;
@@ -80,7 +80,7 @@ void call_registry::esborra_arbre(node *n) {
     }
 }
 
-// Metodes privats per inserir un número a l'AVL
+// Metodes privats per inserir i eliminar un número a l'AVL
 call_registry::node* call_registry::rotacio_esquerra(node *n) {
 // Pre: cert
 // Post: retorna el node arrel de l'arbre AVL després de realitzar
@@ -176,83 +176,70 @@ call_registry::node* call_registry::insereix_numero(node *n, nat num, const stri
     return n;
 }
 
-// Metodes privats per eliminar un número a l'AVL
 call_registry::node* call_registry::elimina_numero(node *n, nat num) {
 // Pre: el número num existeix en l'arbre AVL amb arrel n
 // Post: retorna l'arrel de l'arbre AVL actualitzat amb l'eliminació del
 //       número num mantenint totes les propietats de l'arbre AVL
     if (n != nullptr) {
-        if (num < n->_ph.numero())
+        if (num < n->_ph.numero()) {
+            // El número a eliminar está en el subárbol izquierdo
             n->_esq = elimina_numero(n->_esq, num);
-        else if (num > n->_ph.numero())
+        } else if (num > n->_ph.numero()) {
+            // El número a eliminar está en el subárbol derecho
             n->_dret = elimina_numero(n->_dret, num);
-        else {
-            node *aux = n;
-            n = ajunta (n->_esq, n->_dret);
-            delete (aux);
-            _mida--;
-            return n;
+        } else {
+            // Encontramos el nodo a eliminar
+            if (n->_esq == nullptr || n->_dret == nullptr) {
+                // Caso 1: 0 o 1 hijo
+                node* temp = (n->_esq != nullptr) ? n->_esq : n->_dret;
+                if (temp == nullptr) {
+                    // No tiene hijos, simplemente eliminamos el nodo
+                    temp = n;
+                    n = nullptr;
+                } else {
+                    // Copiamos el contenido del hijo no nulo
+                    *n = *temp;
+                }
+                _mida--;
+                delete temp;
+            } else {
+                // Caso 2: 2 hijos
+                // Encontramos el sucesor inorden del nodo a eliminar
+                node* temp = n->_dret;
+                while (temp->_esq != nullptr) {
+                    temp = temp->_esq;
+                }
+                // Copiamos el contenido del sucesor inorden
+                n->_ph = temp->_ph;
+                // Eliminamos el sucesor inorden
+                n->_dret = elimina_numero(n->_dret, temp->_ph.numero());
+            }
         }
+    }
 
-        n->_altura = max(altura(n->_esq), altura(n->_dret)) + 1;
+    // Si el árbol tenía solo un nodo, lo eliminamos directamente
+    if (n != nullptr) {
+        // Actualizamos la altura y realizamos rotaciones si es necesario
+        n->_altura = 1 + max(altura(n->_esq), altura(n->_dret));
         int fact = factor_equilibri(n);
 
-        if (fact > 1 && n->_esq != nullptr) {
-            if (num < n->_esq->_ph.numero())
-                return rotacio_dreta(n);
-            else if (num > n->_esq->_ph.numero()) {
-                n->_esq = rotacio_esquerra(n->_esq);
-                return rotacio_dreta(n);
-            }
+        // Casos de rotación para mantener el equilibrio
+        if (fact > 1 && factor_equilibri(n->_esq) >= 0) {
+            return rotacio_dreta(n);
         }
-        
-        else if (fact < -1 && n->_dret != nullptr) {
-            if (num > n->_dret->_ph.numero())
-                return rotacio_esquerra(n);
-            else if (num < n->_dret->_ph.numero()) {
-                n->_dret = rotacio_dreta(n->_dret);
-                return rotacio_esquerra(n);
-            }
+        if (fact > 1 && factor_equilibri(n->_esq) < 0) {
+            n->_esq = rotacio_esquerra(n->_esq);
+            return rotacio_dreta(n);
+        }
+        if (fact < -1 && factor_equilibri(n->_dret) <= 0) {
+            return rotacio_esquerra(n);
+        }
+        if (fact < -1 && factor_equilibri(n->_dret) > 0) {
+            n->_dret = rotacio_dreta(n->_dret);
+            return rotacio_esquerra(n);
         }
     }
 
-    return n;
-}
-
-call_registry::node* call_registry::ajunta(node* n1, node* n2) {
-// Pre: Cert
-// Post: retorna l'arbre resultant de fusionar n1 i n2
-//       mantenint totes les propietats de l'arbre BST
-    node *n;
-    if (n1 == nullptr) 
-        n = n2;
-    
-    else if (n2 == nullptr)
-        n = n1;
-
-    else {
-        node *aux = elimina_maxim(n1);
-        aux->_dret = n2;
-        aux->_altura = n1->_altura - 1;
-        n = aux;
-    }
-    return n;
-}
-
-call_registry::node* call_registry::elimina_maxim(node *n) {
-// Pre: Cert
-// Post: retorna el node amb el valor màxim en l'arbre AVL amb arrel n,
-//       eliminant aquest node de l'arbre
-    node *n_orig = n, *pare = nullptr;
-    while (n->_dret != nullptr) {
-        pare = n;
-        n = n->_dret;
-    }
-    if (pare != nullptr) {
-        pare->_dret = n->_esq;
-        if (n->_esq != nullptr) n->_esq->_altura = n->_altura;
-        n->_esq = n_orig;
-    }
     return n;
 }
 
