@@ -1,4 +1,5 @@
-// implementacio union-find (particions)
+// implementacio union-find (particions estàtiques - No es permeten insercions o eliminacions d’elements.)
+// segons enunciat: la informació sobre els telèfons no es pot modificar una cop construïda
 
 call_registry _cr; // o vector de la funcio dump de call_registry on estan tots els noms no nulls
 string _pref;
