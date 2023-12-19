@@ -2,6 +2,7 @@
 #define _EASY_DIAL_HPP
 
 #include "call_registry.hpp"
+#include "phone.hpp"
 #include <esin/error>
 #include <esin/util>   
 #include <string>

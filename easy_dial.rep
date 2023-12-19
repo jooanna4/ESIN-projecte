@@ -1,5 +1,13 @@
-// implementacio union-find (particions estàtiques - No es permeten insercions o eliminacions d’elements.)
-// segons enunciat: la informació sobre els telèfons no es pot modificar una cop construïda
+// implementacio trie
 
-call_registry _cr; // o vector de la funcio dump de call_registry on estan tots els noms no nulls
-string _pref;
+struct node_trie {
+    char _c;
+    node_trie *_primf;
+    node_trie *_seggerm;
+    phone _telf;
+}
+
+node_trie *_arrel;  // Node que apunta a l'arrel del trie
+string _pref;       // Prefix actual
+
+node_trie *insereix_nom(node_trie *n, string &nom, nat i);
