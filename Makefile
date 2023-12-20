@@ -12,7 +12,7 @@ phone.o: phone.cpp phone.hpp
 call_registry.o: call_registry.cpp call_registry.hpp phone.cpp phone.hpp
 	g++ -c call_registry.cpp $(OPCIONS)
 
-easy_dial.o: easy_dial.cpp easy_dial.hpp
+easy_dial.o: easy_dial.cpp easy_dial.hpp call_registry.cpp call_registry.hpp phone.cpp phone.hpp
 	g++ -c easy_dial.cpp $(OPCIONS)
 
 dialog.o: dialog.cpp dialog.hpp

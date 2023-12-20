@@ -1,13 +1,16 @@
 // implementacio trie
 
-struct node_trie {
+struct node_tst {
     char _c;
-    node_trie *_primf;
-    node_trie *_seggerm;
+    node_tst *_esq;
+    node_tst *_dret;
+    node_tst *_cen;
     phone _telf;
-}
+};
 
-node_trie *_arrel;  // Node que apunta a l'arrel del trie
-string _pref;       // Prefix actual
+node_tst *_arrel;   // Node que apunta a l'arrel del trie
+string _pref;       // Prefix en curs
 
-node_trie *insereix_nom(node_trie *n, string &nom, nat i);
+static node_tst *insereix_nom(node_tst *n, const string &nom, nat i, phone ph);
+static node_tst *copia_tst(node *n);
+static void esborra_tst(node_tst *n);
