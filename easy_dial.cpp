@@ -59,6 +59,21 @@ void easy_dial::esborra_tst(node_tst *n) {
     }
 }
 
+easy_dial::node_tst* easy_dial::consulta(node_tst *n, nat i, const string &nom) {
+    node_tst *res = nullptr;
+    if (n != nullptr) {
+        if (i == nom.size() && n->_c == phone::ENDCHAR)
+            res = n;
+        else if (n->_c > nom[i])
+            res = consulta(n->_esq, i, nom);
+        else if (n->_c < nom[i])
+            res = consulta(n->_dret, i, nom);
+        else if (n->_c == nom[i])
+            res = consulta(n->_cen, i+1, nom);
+    }
+    return res;
+}
+
 /*----------------------< MÈTODES PÚBLICS >-----------------------*/
 
 easy_dial::easy_dial(const call_registry& R) throw(error) : _arrel(nullptr), _pref("") {
@@ -73,7 +88,8 @@ easy_dial::easy_dial(const call_registry& R) throw(error) : _arrel(nullptr), _pr
 }
 
 easy_dial::easy_dial(const easy_dial& D) throw(error) {
-    _arrel = copia_tst(_arrel);
+    esborra_tst(_arrel);
+    _arrel = copia_tst(D._arrel);
 }
 
 easy_dial& easy_dial::operator=(const easy_dial& D) throw(error) {
@@ -86,6 +102,7 @@ easy_dial::~easy_dial() throw() {
 }
 
 string easy_dial::inici() throw() {
+    _pref = "";
     return "";
 }
 
