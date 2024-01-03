@@ -5,7 +5,8 @@
 phone::phone(nat num, const string& name, nat compt) throw(error) {
     bool found(false);
     nat i = 0;
-    while (not found && i < name.size()) {
+    int siz = name.size();
+    while (not found && i < siz) {        
         if (name[i] == DELETECHAR ||
             name[i] == ENDCHAR ||
             name[i] == ENDPREF)
