@@ -113,13 +113,50 @@ easy_dial::node_tst* easy_dial::consultapref(node_tst *n, string pref) {
 
 void easy_dial::comencen(node_tst *n, vector<string>& result, const string& prefix_actual) {
     if (n != nullptr) {
-        if (n->_c == phone::ENDCHAR) {
+        comencen(n->_esq, result, prefix_actual);
+        if (n->_c == '#')
             result.push_back(prefix_actual);
+        else
+            comencen(n->_cen, result, prefix_actual + n->_c);
+        comencen(n->_dret, result, prefix_actual);
+    }
+}
+// Merge Sort
+void easy_dial::ordena(vector<phone>&vec) {
+    if (vec.size() > 1) {
+        nat mid = vec.size()/2;
+        
+        vector<phone> esq(vec.begin(),vec.begin()+mid);
+        vector<phone> dreta(vec.begin()+mid,vec.begin()+vec.size());
+
+        esq = ordena(esq);
+        dreta = ordena(dreta);
+
+        unsigned i = 0;
+        unsigned j = 0;
+        unsigned k = 0;
+        while (i < esq.size() && j < dreta.size()) {
+            if (esq[i] < dreta[j]) {
+                vec[k]=esq[i];
+                i++;
+            } else {
+                vec[k] = dreta[j];
+                j++;
+            }
+            k++;
         }
 
-        comencen(n->_esq, result, prefix_actual);
-        comencen(n->_cen, result, prefix_actual + n->_c);
-        comencen(n->_dret, result, prefix_actual);
+        while (i<esq.size()) {
+            vec[k] = esq[i];
+            i++;
+            k++;
+        }
+
+        while (j<dreta.size()) {
+            vec[k]=dreta[j];
+            j++;
+            k++;
+        }
     }
 }
 
@@ -130,8 +167,8 @@ easy_dial::easy_dial(const call_registry& R) throw(error) : _arrel(nullptr) {
     _pref = "";
     _prefindef = true;
     vector<phone>vec;
-    // vec amb nom del call_registry ordenat per frequencies
     R.dump(vec);
+    // vec amb nom del call_registry ordenat per frequencies
     string k;
     if (vec.size() > 0) _telmesfreq = vec[0];
     for (int i = 0; i < vec.size(); i++) {

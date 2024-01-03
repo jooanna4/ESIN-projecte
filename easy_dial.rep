@@ -14,6 +14,7 @@ bool _prefindef;    // True si el prefix _pref es troba indefinit
                     // Si es false i _pref == "", el prefix és buit
 phone _telmesfreq;   // Telèfon amb més freqüència del easy_dial
 
+static void ordena(vector<phone>&vec);
 static node_tst *insereix_nom(node_tst *n, const string nom, nat i, phone ph);
 static node_tst *copia_tst(node_tst *n);
 static void esborra_tst(node_tst *n);

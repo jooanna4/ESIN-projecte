@@ -2,7 +2,7 @@
 #include <cstring>
 
 // Cost: θ(name.size())
-phone::phone(nat num, const string& name, nat compt) throw(error) {
+phone::phone(nat num, const string& name, nat compt) throw(error) : _name(name), _num(num), _compt(compt) {
     bool found(false);
     nat i = 0;
     int siz = name.size();
@@ -16,12 +16,6 @@ phone::phone(nat num, const string& name, nat compt) throw(error) {
 
     if (found)
         throw error(ErrNomIncorrecte);
-        
-    else {
-        _num = num;
-        _name = name;
-        _compt = compt;
-    }
 }
 
 // Cost: θ(1)

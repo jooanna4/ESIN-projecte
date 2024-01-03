@@ -4,5 +4,5 @@
     ser negatives. Per representar el nom, hem escollit la variable string
 */
 
-nat _num, _compt;
 string _name;
+nat _num, _compt;
