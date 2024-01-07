@@ -1,7 +1,7 @@
 #include "easy_dial.hpp"
 /*----------------------< MÈTODES PRIVATS >-----------------------*/
 // Cost: θ(nom.length() * log(#simbols))
-easy_dial::node_tst* easy_dial::insereix_nom(node_tst *n, const string nom, nat i, phone ph) {
+easy_dial::node_tst* easy_dial::insereix_nom(node_tst *n, const string& nom, nat i, phone& ph) {
     if (n == nullptr) {
         n = new node_tst;
         n->_c = nom[i];
@@ -122,7 +122,7 @@ void easy_dial::comencen(node_tst *n, vector<string>& result, const string& pref
     }
 }
 // Merge Sort
-void easy_dial::ordena(vector<phone>&vec) {
+vector<phone> easy_dial::ordena(vector<phone>&vec) {
     if (vec.size() > 1) {
         nat mid = vec.size()/2;
         
@@ -158,6 +158,7 @@ void easy_dial::ordena(vector<phone>&vec) {
             k++;
         }
     }
+    return vec;
 }
 
 
@@ -197,6 +198,10 @@ easy_dial& easy_dial::operator=(const easy_dial& D) throw(error) {
 
 easy_dial::~easy_dial() throw() {
     esborra_tst(_arrel);
+    _arrel = nullptr;
+    _pref = "";
+    _prefindef = true;
+    _telmesfreq = phone();
 }
 
 string easy_dial::inici() throw() {

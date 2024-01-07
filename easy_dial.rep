@@ -9,13 +9,13 @@ struct node_tst {
 };
 
 node_tst *_arrel;   // Node que apunta a l'arrel del trie
-std::string _pref;       // Prefix en curs
+string _pref;       // Prefix en curs
 bool _prefindef;    // True si el prefix _pref es troba indefinit
                     // Si es false i _pref == "", el prefix és buit
 phone _telmesfreq;   // Telèfon amb més freqüència del easy_dial
 
-static void ordena(vector<phone>&vec);
-static node_tst *insereix_nom(node_tst *n, const string nom, nat i, phone ph);
+static vector<phone> ordena(vector<phone>&vec);
+static node_tst *insereix_nom(node_tst *n, const string& nom, nat i, phone& ph);
 static node_tst *copia_tst(node_tst *n);
 static void esborra_tst(node_tst *n);
 static node_tst *consulta(node_tst *n, nat i, const string &nom);
