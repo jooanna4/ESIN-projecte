@@ -12,13 +12,12 @@ node_tst *_arrel;   // Node que apunta a l'arrel del trie
 string _pref;       // Prefix en curs
 bool _prefindef;    // True si el prefix _pref es troba indefinit
                     // Si es false i _pref == "", el prefix és buit
-phone _telmesfreq;   // Telèfon amb més freqüència del easy_dial
 
 static vector<phone> ordena(vector<phone>&vec);
 static node_tst *insereix_nom(node_tst *n, const string& nom, nat i, phone& ph);
 static node_tst *copia_tst(node_tst *n);
 static void esborra_tst(node_tst *n);
 static node_tst *consulta(node_tst *n, nat i, const string &nom);
-static void telfmesgran(node_tst *n, phone &mes_gran);
+static phone primer_phone(node_tst* n);
 static node_tst *consultapref(node_tst *n, string pref);
 static void comencen(node_tst *n, vector<string>& result, const string& prefix_actual);

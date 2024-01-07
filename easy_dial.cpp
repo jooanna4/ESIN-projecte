@@ -74,21 +74,23 @@ easy_dial::node_tst* easy_dial::consulta(node_tst *n, nat i, const string &nom) 
     return res;
 }
 
-void easy_dial::telfmesgran(node_tst *n, phone &mes_gran) {
+phone easy_dial::primer_phone(node_tst* n) {
     if (n != nullptr) {
-        telfmesgran(n->_esq, mes_gran);
-
-        if (mes_gran.nom() == "" && n->_c == phone::ENDCHAR)            // La variable mes_gran és buida
-            mes_gran = n->_telf;
-
-        else if (mes_gran.nom() != "" && n->_c == phone::ENDCHAR) {     // La variable mes_gran no és buida
-            if (n->_telf > mes_gran)
-                mes_gran = n->_telf;
+        phone phone_esq = primer_phone(n->_esq);
+        if (phone_esq.nom() != "") {
+            return phone_esq;
         }
-
-        telfmesgran(n->_cen, mes_gran);
-        telfmesgran(n->_dret, mes_gran);
+        if (n->_c == phone::ENDCHAR && n->_telf.nom() != "") {
+            return n->_telf;
+        }
+        phone phone_cen = primer_phone(n->_cen);
+        if (phone_cen.nom() != "") {
+            return phone_cen;
+        }
+        return primer_phone(n->_dret);
     }
+    else 
+        return phone();
 }
 
 easy_dial::node_tst* easy_dial::consultapref(node_tst *n, string pref) {
@@ -164,17 +166,14 @@ vector<phone> easy_dial::ordena(vector<phone>&vec) {
 
 /*----------------------< MÈTODES PÚBLICS >-----------------------*/
 
-easy_dial::easy_dial(const call_registry& R) throw(error) : _arrel(nullptr) {
+easy_dial::easy_dial(const call_registry& R) throw(error) : _arrel(nullptr), _prefindef(true) {
     _pref = "";
-    _prefindef = true;
     vector<phone>vec;
     R.dump(vec);
     // vec amb nom del call_registry ordenat per frequencies
     string k;
-    if (vec.size() > 0) _telmesfreq = vec[0];
     for (int i = 0; i < vec.size(); i++) {
         k = vec[i].nom() + phone::ENDCHAR;
-        if (vec[i] > _telmesfreq) _telmesfreq = vec[i];
         _arrel = insereix_nom(_arrel, k, 0, vec[i]);
     }
 }
@@ -184,7 +183,6 @@ easy_dial::easy_dial(const easy_dial& D) throw(error) {
     _arrel = copia_tst(D._arrel);
     _pref = D._pref;
     _prefindef = D._prefindef;
-    _telmesfreq = D._telmesfreq;
 }
 
 easy_dial& easy_dial::operator=(const easy_dial& D) throw(error) {
@@ -192,7 +190,6 @@ easy_dial& easy_dial::operator=(const easy_dial& D) throw(error) {
     _arrel = copia_tst(D._arrel);
     _pref = D._pref;
     _prefindef = D._prefindef;
-    _telmesfreq = D._telmesfreq;
     return *this;
 }
 
@@ -201,13 +198,12 @@ easy_dial::~easy_dial() throw() {
     _arrel = nullptr;
     _pref = "";
     _prefindef = true;
-    _telmesfreq = phone();
 }
 
 string easy_dial::inici() throw() {
     _pref = "";             
     _prefindef = false;         // Pref a buit
-    return _telmesfreq.nom();
+    return (primer_phone(_arrel)).nom();
 }
 
 string easy_dial::seguent(char c) throw(error) {
@@ -216,13 +212,13 @@ string easy_dial::seguent(char c) throw(error) {
     // Comprovació amb F(S, p)
     node_tst *pref = consultapref(_arrel, _pref);
     phone mes_gran1;
-    telfmesgran(pref->_cen, mes_gran1);
+    if (pref != nullptr)
+        mes_gran1 = primer_phone(pref->_cen);
     if (mes_gran1.nom() == "") {
         _pref = "";
         _prefindef = true;
         throw error(ErrPrefixIndef);
     }
-
     // Canvi prefix
     _pref += c;
     _prefindef = false;
@@ -230,8 +226,9 @@ string easy_dial::seguent(char c) throw(error) {
     // Comprovació amb F(S, p')
     pref = consultapref(_arrel, _pref);
     phone mes_gran2;
-    telfmesgran(pref->_cen, mes_gran2);
-    if (mes_gran1.nom() == "") {
+    if (pref != nullptr)
+        mes_gran2 = primer_phone(pref->_cen);
+    if (mes_gran2.nom() == "") {
         return "";
     }
     else
@@ -246,8 +243,7 @@ string easy_dial::anterior() throw(error) {
     _pref.pop_back();
 
     node_tst *pref = consultapref(_arrel, _pref);
-    phone mes_gran;
-    telfmesgran(pref->_cen, mes_gran);
+    phone mes_gran = primer_phone(pref->_cen);
     if (mes_gran.nom() != "")
         return mes_gran.nom();
     else
@@ -258,8 +254,7 @@ nat easy_dial::num_telf() const throw(error) {
     if (_prefindef) throw error(ErrPrefixIndef);
 
     node_tst *pref = consultapref(_arrel, _pref);
-    phone mes_gran;
-    telfmesgran(pref->_cen, mes_gran);
+    phone mes_gran = primer_phone(pref->_cen);
 
     if (mes_gran.nom() == "") throw error(ErrNoExisteixTelefon);
 
@@ -269,10 +264,53 @@ nat easy_dial::num_telf() const throw(error) {
 void easy_dial::comencen(const string& pref, vector<string>& result) const throw(error) {
     if (pref != "") {
         node_tst *npref = consultapref(_arrel, pref);
-        comencen(npref, result, pref);
+        comencen(npref->_cen, result, pref);
     }
 }
 
+/* Retorna el número mitjà de pulsacions necessàries para obtenir un
+  telèfon. Formalment, si X és el conjunt de noms emmagatzemats en
+  el easy_dial i t(s) és el número de pulsacions mínimes
+  necessàries (= número de crides a l'operació seguent) per
+  obtenir el telèfon el nom del qual és s. La funció retorna la suma
+      Pr(s) · t(s)
+  per tots els telèfons s del conjunt X, sent Pr(s) la probabilitat de
+  telefonar a s. La probabilitat s'obté dividint la freqüència de s per
+  la suma de totes les freqüències. */
 double easy_dial::longitud_mitjana() const throw() {
-    return 1;
+    double sum = 0;
+    double total_freq = 0;
+    vector<phone> vec;
+    recorre_tst(_arrel, "", vec);
+    for (const auto& p : vec) {
+        total_freq += p.frequencia();
+    }
+    for (const auto& p : vec) {
+        double prob = p.frequencia() / total_freq;
+        string nom = p.nom();
+        int num_pulsacions = 0;
+        bool encontrado = false;
+        inici();
+        while (!encontrado && num_pulsacions < nom.size()) {
+            if (seguent(nom[num_pulsacions]) == nom) {
+                num_pulsacions += nom.size();
+                encontrado = true;
+            }
+            num_pulsacions++;
+        }
+        if (!encontrado) continue;
+        sum += prob * num_pulsacions;
+    }
+    return sum;
+}
+
+void easy_dial::recorre_tst(node_tst* n, string prefix, vector<phone>& vec) const {
+    if (n != nullptr) {
+        recorre_tst(n->_esq, prefix, vec);
+        if (n->_c == phone::ENDCHAR && n->_telf.nom() != "") {
+            vec.push_back(n->_telf);
+        }
+        recorre_tst(n->_cen, prefix + n->_c, vec);
+        recorre_tst(n->_dret, prefix, vec);
+    }
 }
