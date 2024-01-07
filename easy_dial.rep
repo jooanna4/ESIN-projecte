@@ -22,3 +22,4 @@ static node_tst *consulta(node_tst *n, nat i, const string &nom);
 static void telfmesgran(node_tst *n, phone &mes_gran);
 static node_tst *consultapref(node_tst *n, string pref);
 static void comencen(node_tst *n, vector<string>& result, const string& prefix_actual);
+33
