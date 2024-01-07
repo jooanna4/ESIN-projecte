@@ -275,4 +275,4 @@ void easy_dial::comencen(const string& pref, vector<string>& result) const throw
 
 double easy_dial::longitud_mitjana() const throw() {
     return 1;
-} 33
+}
