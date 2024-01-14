@@ -5,8 +5,6 @@
     amb això i l'atribut _npref, que guarda el node de l'últim caràcter del
     prefix actual, volia que les funcions de inici(), seguent() i num_telf()
     fossin el menys costoses possible, cosa que no he pogut assolir.
-
-
 */
 
 struct node_tst {
@@ -22,7 +20,8 @@ node_tst *_arrel;   // Node que apunta a l'arrel del trie
 string _pref;       // Prefix en curs
 bool _prefindef;    // True si el prefix _pref es troba indefinit
                     // Si es false i _pref == "", el prefix és buit
-bool _hihatelefon;  // Existeix telèfon amb prefix _pref que no hagi sortit abans al easy dial?
+bool _hihatelefon;  // True si existeix telèfon amb prefix _pref que no hagi sortit abans al easy dial
+                    // False en cas contrari
 
 static node_tst *insereix_nom(node_tst *n, const string& nom, nat i, phone& ph);
 static node_tst *copia_tst(node_tst *n);
