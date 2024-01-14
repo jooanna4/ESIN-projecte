@@ -260,13 +260,11 @@ call_registry::call_registry() throw(error) : _arrel(nullptr), _mida(0) {}
 
 // Cost: θ(n)
 call_registry::call_registry(const call_registry& R) throw(error) : _mida(R._mida) {
-    _arrel = copia_arbre(R._arrel);             // Cost: θ(n)
+    _arrel = copia_arbre(R._arrel);
 }
 
 // Cost: θ(n)
 call_registry& call_registry::operator=(const call_registry& R) throw(error) {
-// Pre: cert
-// Post: el paràmetre implícit és una còpia de R
     _mida = R._mida;
     esborra_arbre(_arrel);
     _arrel = copia_arbre(R._arrel);
